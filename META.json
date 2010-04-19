@@ -21,6 +21,11 @@
       "version" : 1.4
    },
    "name" : "CPAN-Meta",
+   "no_index" : {
+      "directory" : [
+         "history"
+      ]
+   },
    "recommends" : {},
    "requires" : {
       "Carp" : "0",
@@ -35,9 +40,19 @@
    "resources" : {
       "repository" : "http://github.com/dagolden/cpan-meta"
    },
-   "version" : "2.101090",
+   "version" : "2.101091",
    "x_Dist_Zilla" : {
       "plugins" : [
+         {
+            "class" : "Dist::Zilla::Plugin::MetaNoIndex",
+            "name" : "MetaNoIndex",
+            "version" : "0.0200"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::CheckExtraTests",
+            "name" : "CheckExtraTests",
+            "version" : "0.003"
+         },
          {
             "class" : "Dist::Zilla::Plugin::GatherDir",
             "name" : "@Filter/@@Basic/GatherDir",
@@ -167,11 +182,6 @@
             "class" : "Dist::Zilla::Plugin::AutoVersion",
             "name" : "AutoVersion",
             "version" : "2.101040"
-         },
-         {
-            "class" : "Dist::Zilla::Plugin::CheckExtraTests",
-            "name" : "CheckExtraTests",
-            "version" : "0.003"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",

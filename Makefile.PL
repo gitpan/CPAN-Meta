@@ -27,7 +27,7 @@ my %WriteMakefileArgs = (
                                            },
                        'ABSTRACT' => 'the distribution metadata for a CPAN dist',
                        'EXE_FILES' => [],
-                       'VERSION' => '2.101090',
+                       'VERSION' => '2.101091',
                        'PREREQ_PM' => {
                                         'Scalar::Util' => '0',
                                         'Parse::CPAN::Meta' => '0',
