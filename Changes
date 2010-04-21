@@ -1,5 +1,17 @@
 Revision history for CPAN-Meta
 
+2.101110  2010-04-21 11:06:52 EST5EDT
+
+  - clarified that .XXXXXX versions of the CPAN-Meta distribution will not
+    change the meaning of the CPAN::Meta::Spec, but may fix typos or
+    clarify prose
+
+  - fixed a typo regarding dotted-integer versions: keeping components
+    in the range 0-999 was corrected to a "should" instead of a "must"
+
+  - fixed validation bugs for certain types of nested data structures
+    (based on a patch provided by Barbie)
+
 2.101091  2010-04-19 06:32:13 EST5EDT
 
   - keep the old specs from getting indexed so as not to confuse people

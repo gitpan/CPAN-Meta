@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.101091';
+  $CPAN::Meta::VERSION = '2.101110';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -263,7 +263,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.101091
+version 2.101110
 
 =head1 SYNOPSIS
 
