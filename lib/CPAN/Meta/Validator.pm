@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Validator;
 BEGIN {
-  $CPAN::Meta::Validator::VERSION = '2.101110';
+  $CPAN::Meta::Validator::VERSION = '2.101380';
 }
 # ABSTRACT: validate CPAN distribution metadata structures
 
@@ -341,9 +341,11 @@ my %definitions = (
 },
 
 # note that the 1.0 spec doesn't specify optional or mandatory fields
+# but we will treat version as mandatory since otherwise META 1.0 is
+# completely arbitrary and pointless
 '1.0' => {
   'name'                => { value => \&string  },
-  'version'             => { value => \&version },
+  'version'             => { mandatory => 1, value => \&version },
   'license'             => { value => \&license },
   'generated_by'        => { value => \&string  },
 
@@ -793,7 +795,7 @@ CPAN::Meta::Validator - validate CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101110
+version 2.101380
 
 =head1 SYNOPSIS
 
