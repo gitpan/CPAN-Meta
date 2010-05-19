@@ -31,8 +31,11 @@ requires:
   autodie: 0
   perl: 5.006
 resources:
-  repository: http://github.com/dagolden/cpan-meta
-version: 2.101380
+  repository: git://ec2.dagolden.com/cpan-meta.git
+  repository.type: git
+  repository.url: http://github.com/dagolden/cpan-meta.git
+  repository.web: http://github.com/dagolden/cpan-meta
+version: 2.101390
 x_Dist_Zilla:
   plugins:
     -
@@ -42,6 +45,10 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckExtraTests
       name: CheckExtraTests
+      version: 0.003
+    -
+      class: Dist::Zilla::Plugin::CheckChangesHasContent
+      name: CheckChangesHasContent
       version: 0.003
     -
       class: Dist::Zilla::Plugin::GatherDir
@@ -152,9 +159,9 @@ x_Dist_Zilla:
       name: Git::Push
       version: 1.100760
     -
-      class: Dist::Zilla::Plugin::Repository
-      name: Repository
-      version: 0.11
+      class: Dist::Zilla::Plugin::MetaResources
+      name: MetaResources
+      version: 2.101310
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

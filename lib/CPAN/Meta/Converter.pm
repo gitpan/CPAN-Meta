@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101380';
+  $CPAN::Meta::Converter::VERSION = '2.101390';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -42,7 +42,14 @@ sub _keep_or_zero { defined($_[0]) ? $_[0] : 0 }
 
 sub _keep_or_unknown { defined($_[0]) ? $_[0] : "unknown" }
 
-sub _generated_by { __PACKAGE__ . " version " . (__PACKAGE__->VERSION || "<dev>") }
+sub _generated_by {
+  my $gen = shift;
+  my $sig = __PACKAGE__ . " version " . (__PACKAGE__->VERSION || "<dev>");
+
+  return $sig unless defined $gen and length $gen;
+  return $gen if $gen =~ /(, )\Q$sig/;
+  return "$gen, $sig";
+}
 
 sub _listify { ! defined $_[0] ? undef : ref $_[0] eq 'ARRAY' ? $_[0] : [$_[0]] }
 
@@ -793,7 +800,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101380
+version 2.101390
 
 =head1 SYNOPSIS
 
