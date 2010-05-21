@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101390';
+  $CPAN::Meta::Converter::VERSION = '2.101410';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -261,7 +261,6 @@ sub _prereqs {
 BEGIN {
   my @old_prereqs = qw(
     requires
-    build_requires
     configure_requires
     recommends
     conflicts
@@ -277,6 +276,19 @@ BEGIN {
     no strict 'refs';
     *{$sub} = sub { _extract_prereqs($_[2]->{prereqs},$phase,$type) };
   }
+}
+
+sub _get_build_requires {
+  my ($data, $key, $meta) = @_;
+
+  my $test_h  = _extract_prereqs($_[2]->{prereqs}, qw(test  requires)) || {};
+  my $build_h = _extract_prereqs($_[2]->{prereqs}, qw(build requires)) || {};
+
+  require Version::Requirements;
+  my $test_req  = Version::Requirements->from_string_hash($test_h);
+  my $build_req = Version::Requirements->from_string_hash($build_h);
+
+  $test_req->add_requirements($build_req)->as_string_hash;
 }
 
 sub _extract_prereqs {
@@ -800,7 +812,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101390
+version 2.101410
 
 =head1 SYNOPSIS
 

@@ -35,7 +35,7 @@ resources:
   repository.type: git
   repository.url: http://github.com/dagolden/cpan-meta.git
   repository.web: http://github.com/dagolden/cpan-meta
-version: 2.101390
+version: 2.101410
 x_Dist_Zilla:
   plugins:
     -
