@@ -11,7 +11,8 @@ build_requires:
   Test::More: 0.88
 configure_requires:
   ExtUtils::MakeMaker: 6.31
-generated_by: 'Dist::Zilla version 2.101310'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 3.101421, CPAN::Meta::Converter version 2.101450'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,7 +21,6 @@ name: CPAN-Meta
 no_index:
   directory:
     - history
-recommends: {}
 requires:
   Carp: 0
   JSON: 2
@@ -31,105 +31,102 @@ requires:
   autodie: 0
   perl: 5.006
 resources:
-  repository: git://ec2.dagolden.com/cpan-meta.git
-  repository.type: git
-  repository.url: http://github.com/dagolden/cpan-meta.git
-  repository.web: http://github.com/dagolden/cpan-meta
-version: 2.101410
+  repository: http://github.com/dagolden/cpan-meta.git
+version: 2.101450
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
       name: MetaNoIndex
-      version: 0.0200
+      version: 1.101200
     -
       class: Dist::Zilla::Plugin::CheckExtraTests
       name: CheckExtraTests
-      version: 0.003
+      version: 0.004
     -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
       name: CheckChangesHasContent
-      version: 0.003
+      version: 0.002
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Filter/@Basic/GatherDir'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@Filter/@Basic/PruneCruft'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@Filter/@Basic/ManifestSkip'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Filter/@Basic/MetaYAML'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::License
       name: '@Filter/@Basic/License'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::Readme
       name: '@Filter/@Basic/Readme'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@Filter/@Basic/ExecDir'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@Filter/@Basic/ShareDir'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::MakeMaker
       name: '@Filter/@Basic/MakeMaker'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@Filter/@Basic/Manifest'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::TestRelease
       name: '@Filter/@Basic/TestRelease'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Filter/@Basic/ConfirmRelease'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@Filter/@Basic/UploadToCPAN'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::AutoPrereq
       name: '@Filter/AutoPrereq'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@Filter/PkgVersion'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@Filter/MetaConfig'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@Filter/MetaJSON'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@Filter/NextRelease'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@Filter/PodSyntaxTests'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::Repository
       name: '@Filter/Repository'
-      version: 0.11
+      version: 0.12
     -
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@Filter/PodWeaver'
@@ -137,49 +134,49 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Filter/@Git/Check'
-      version: 1.100760
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@Filter/@Git/Commit'
-      version: 1.100760
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Filter/@Git/Tag'
-      version: 1.100760
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Filter/@Git/Push'
-      version: 1.100760
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::AutoVersion
       name: AutoVersion
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: Git::Push
-      version: 1.100760
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::MetaResources
       name: MetaResources
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 2.101310
+      version: 3.101421
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 2.101310
+      version: 3.101421
   zilla:
     class: Dist::Zilla
     config:
       is_trial: 0
-    version: 2.101310
+    version: 3.101421

@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101410';
+  $CPAN::Meta::Converter::VERSION = '2.101450';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -53,11 +53,16 @@ sub _generated_by {
 
 sub _listify { ! defined $_[0] ? undef : ref $_[0] eq 'ARRAY' ? $_[0] : [$_[0]] }
 
-sub _prefix_custom { "x_" . $_[0] }
-
-sub _camelcase_custom {
+sub _prefix_custom {
   my $key = shift;
-  $key =~ s{[^a-zA-Z]}{}g; # delete non-alphabetical chars
+  $key =~ s/^(?!x_)   # Unless it already starts with x_
+             (?:x-?)? # Remove leading x- or x (if present)
+           /x_/ix;    # and prepend x_
+  return $key;
+}
+
+sub _ucfirst_custom {
+  my $key = shift;
   $key = ucfirst $key unless $key =~ /[A-Z]/;
   return $key;
 }
@@ -392,7 +397,7 @@ my $resource_downgrade_spec = {
   homepage   => \&_url_or_drop,
   bugtracker => sub { return $_[0]->{web} },
   repository => sub { return $_[0]->{url} || $_[0]->{web} },
-  ':custom'  => \&_camelcase_custom,
+  ':custom'  => \&_ucfirst_custom,
 };
 
 sub _downgrade_resources {
@@ -629,8 +634,8 @@ my %down_convert = (
       release_status
     )],
 
-    # custom keys must be changed to CamelCase
-    ':custom'              => \&_camelcase_custom
+    # custom keys will be left unchanged
+    ':custom'              => \&_keep
   },
   '1.3-from-1.4' => {
     # MANDATORY
@@ -660,7 +665,7 @@ my %down_convert = (
     )],
 
     # other random keys are OK if already valid
-    ':custom'              => \&_camelcase_custom,
+    ':custom'              => \&_keep,
   },
   '1.2-from-1.3' => {
     # MANDATORY
@@ -685,7 +690,7 @@ my %down_convert = (
     'resources'           => \&_resources_1_2,
 
     # other random keys are OK if already valid
-    ':custom'              => \&_camelcase_custom,
+    ':custom'              => \&_keep,
   },
   '1.1-from-1.2' => {
     # MANDATORY
@@ -715,7 +720,7 @@ my %down_convert = (
     )],
 
     # other random keys are OK if already valid
-    ':custom'              => \&_camelcase_custom,
+    ':custom'              => \&_keep,
   },
   '1.0-from-1.1' => {
     # IMPLIED MANDATORY
@@ -733,7 +738,7 @@ my %down_convert = (
     'requires'            => \&_version_map,
 
     # other random keys are OK if already valid
-    ':custom'              => \&_camelcase_custom,
+    ':custom'              => \&_keep,
   },
 );
 
@@ -812,7 +817,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101410
+version 2.101450
 
 =head1 SYNOPSIS
 
