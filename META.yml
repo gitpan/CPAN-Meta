@@ -32,7 +32,7 @@ requires:
   perl: 5.006
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.101450
+version: 2.101460
 x_Dist_Zilla:
   plugins:
     -
