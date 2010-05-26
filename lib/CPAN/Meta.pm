@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.101460';
+  $CPAN::Meta::VERSION = '2.101461';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -16,6 +16,7 @@ use CPAN::Meta::Converter;
 use CPAN::Meta::Validator;
 use JSON 2 ();
 use Parse::CPAN::Meta ();
+use Storable ();
 
 
 BEGIN {
@@ -49,7 +50,7 @@ BEGIN {
       my $value = $_[0]{ $attr };
       confess "$attr must be called in list context"
         unless wantarray;
-      return @$value if ref $value;
+      return @{ Storable::dclone($value) } if ref $value;
       return $value;
     };
   }
@@ -75,10 +76,22 @@ BEGIN {
     (my $subname = $attr) =~ s/-/_/;
     *$subname = sub {
       my $value = $_[0]{ $attr };
-      return $value if $value;
+      return Storable::dclone($value) if $value;
       return {};
     };
   }
+}
+
+
+sub custom_keys {
+  return grep { /^x_/i } keys %{$_[0]};
+}
+
+sub custom {
+  my ($self, $attr) = @_;
+  my $value = $self->{$attr};
+  return Storable::dclone($value) if ref $value;
+  return $value;
 }
 
 
@@ -263,7 +276,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.101460
+version 2.101461
 
 =head1 SYNOPSIS
 
@@ -492,6 +505,15 @@ prereqs
 optional_features
 
 =back
+
+=head1 CUSTOM DATA
+
+A list of custom keys are available from the C<custom_keys> method and
+particular keys may be retrieved with the C<custom> method.
+
+  say $meta->custom($_) for $meta->custom_keys;
+
+If a custom key refers to a data structure, a deep clone is returned.
 
 =head1 BUGS
 

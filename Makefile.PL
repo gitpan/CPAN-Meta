@@ -11,7 +11,13 @@ use ExtUtils::MakeMaker 6.31;
 my %WriteMakefileArgs = (
   'ABSTRACT' => 'the distribution metadata for a CPAN dist',
   'AUTHOR' => 'David Golden <dagolden@cpan.org>, Ricardo Signes <rjbs@cpan.org>',
-  'BUILD_REQUIRES' => {},
+  'BUILD_REQUIRES' => {
+    'Data::Dumper' => '0',
+    'File::Spec' => '0',
+    'File::Temp' => '0.20',
+    'IO::Dir' => '0',
+    'Test::More' => '0.88'
+  },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
   },
@@ -28,7 +34,7 @@ my %WriteMakefileArgs = (
     'Version::Requirements' => '0.101020',
     'autodie' => '0'
   },
-  'VERSION' => '2.101460',
+  'VERSION' => '2.101461',
   'test' => {
     'TESTS' => 't/*.t'
   }
