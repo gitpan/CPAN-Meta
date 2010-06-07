@@ -22,6 +22,18 @@ lib/CPAN/Meta/Validator.pm
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
+t/data-bad/1122575719-META.yml
+t/data-bad/1206545041-META.yml
+t/data-bad/1598804075-META.yml
+t/data-bad/1927486199-META.yml
+t/data-bad/1985684504-META.yml
+t/data-bad/1985980974-META.yml
+t/data-bad/2031017050-META.yml
+t/data-bad/284247103-META.yml
+t/data-bad/344981821-META.yml
+t/data-bad/35478989-META.yml
+t/data-bad/476602558-META.yml
+t/data-bad/98042513-META.yml
 t/data-bad/META-1_0.yml
 t/data-bad/META-1_1.yml
 t/data-bad/META-1_2.yml
@@ -40,6 +52,7 @@ t/data/META-1_2.yml
 t/data/META-1_3.yml
 t/data/META-1_4.yml
 t/data/META-2.json
+t/load-bad.t
 t/meta-obj.t
 t/no-index.t
 t/prereqs-finalize.t

@@ -32,9 +32,10 @@ my %WriteMakefileArgs = (
     'Scalar::Util' => '0',
     'Storable' => '0',
     'Version::Requirements' => '0.101020',
-    'autodie' => '0'
+    'autodie' => '0',
+    'version' => '0.82'
   },
-  'VERSION' => '2.101461',
+  'VERSION' => '2.101580',
   'test' => {
     'TESTS' => 't/*.t'
   }
@@ -43,10 +44,10 @@ my %WriteMakefileArgs = (
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM}; 
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
   for my $mod ( keys %$br ) {
     if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod}; 
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
     }
     else {
       $pp->{$mod} = $br->{$mod};
