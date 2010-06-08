@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.101590';
+  $CPAN::Meta::VERSION = '2.101591';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -296,6 +296,12 @@ sub feature {
   return CPAN::Meta::Feature->new($ident, $f);
 }
 
+
+sub as_struct {
+  my ($self) = @_;
+  return Storable::dclone($self);
+}
+
 1;
 
 
@@ -308,7 +314,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.101590
+version 2.101591
 
 =head1 SYNOPSIS
 
@@ -457,6 +463,17 @@ optional feature described by the distribution's metadata.
 This method returns a L<CPAN::Meta::Feature> object for the optional feature
 with the given identifier.  If no feature with that identifier exists, an
 exception will be raised.
+
+=head2 as_struct
+
+  my $copy = $meta->as_struct;
+
+This method returns a deep copy of the object's metadata as an unblessed has
+reference.  This is useful for raw analysis or for passing to a converter
+object.  For example:
+
+  my $cmc = CPAN::Meta::Converter->new( $meta->as_struct );
+  my $meta_1_4 = $cmc->convert( version => "1.4" );
 
 =head1 STRING DATA
 

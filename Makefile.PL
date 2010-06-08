@@ -35,7 +35,7 @@ my %WriteMakefileArgs = (
     'autodie' => '0',
     'version' => '0.82'
   },
-  'VERSION' => '2.101590',
+  'VERSION' => '2.101591',
   'test' => {
     'TESTS' => 't/*.t'
   }

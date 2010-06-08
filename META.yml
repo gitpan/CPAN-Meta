@@ -12,7 +12,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101540, CPAN::Meta::Converter version 2.101580'
+generated_by: 'Dist::Zilla version 4.101540, CPAN::Meta::Converter version 2.101590'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -33,7 +33,7 @@ requires:
   version: 0.82
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.101590
+version: 2.101591
 x_Dist_Zilla:
   plugins:
     -
