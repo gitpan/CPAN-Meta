@@ -58,6 +58,7 @@ t/no-index.t
 t/prereqs-finalize.t
 t/prereqs-merge.t
 t/prereqs.t
+t/repository.t
 t/save-load.t
 t/validator.t
 xt/release/pod-syntax.t

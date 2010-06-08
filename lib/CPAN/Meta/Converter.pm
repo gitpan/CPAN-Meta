@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101580';
+  $CPAN::Meta::Converter::VERSION = '2.101590';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -286,9 +286,9 @@ sub _no_index_directory {
 }
 
 sub _is_module_name {
-  my $key = shift;
-  return unless defined $key && length $key;
-  return $key =~ m{^[A-Za-z][A-Za-z0-9_]*(?:::[A-Za-z0-9_]+)*$};
+  my $mod = shift;
+  return unless defined $mod && length $mod;
+  return $mod =~ m{^[A-Za-z][A-Za-z0-9_]*(?:::[A-Za-z0-9_]+)*$};
 }
 
 sub _clean_version {
@@ -564,10 +564,21 @@ my $bugtracker2_spec = {
   ':custom'  => \&_prefix_custom,
 };
 
+sub _repo_type {
+  my ($element, $key, $meta, $to_version) = @_;
+  return $element if defined $element;
+  return unless exists $meta->{url};
+  my $repo_url = $meta->{url};
+  for my $type ( qw/git svn/ ) {
+    return $type if $repo_url =~ m{\A$type};
+  }
+  return;
+}
+
 my $repository2_spec = {
   web => \&_url_or_drop,
   url => \&_url_or_drop,
-  type => \&_keep_or_unknown,
+  type => \&_repo_type,
   ':custom'  => \&_prefix_custom,
 };
 
@@ -575,7 +586,7 @@ my $resources2_cleanup = {
   license    => \&_url_list,
   homepage   => \&_url_or_drop,
   bugtracker => sub { ref $_[0] ? _convert( $_[0], $bugtracker2_spec ) : undef },
-  repository => sub { ref $_[0] ? _convert( $_[0], $repository2_spec ) : undef },
+  repository => sub { my $data = shift; ref $data ? _convert( $data, $repository2_spec ) : undef },
   ':custom'  => \&_prefix_custom,
 };
 
@@ -628,7 +639,7 @@ sub _downgrade_resources {
 
 sub _release_status {
   my ($element, undef, $meta) = @_;
-  return $element if $element =~ m{\A(?:stable|testing|unstable)\z};
+  return $element if $element && $element =~ m{\A(?:stable|testing|unstable)\z};
   return _release_status_from_version(undef, undef, $meta);
 }
 
@@ -664,7 +675,7 @@ sub _convert {
   my ($data, $spec, $to_version) = @_;
 
   my $new_data = {};
-  for my $key ( %$spec ) {
+  for my $key ( keys %$spec ) {
     next if $key eq ':custom' || $key eq ':drop';
     next unless my $fcn = $spec->{$key};
     die "spec for '$key' is not a coderef"
@@ -678,7 +689,7 @@ sub _convert {
 
   for my $key ( keys %$data ) {
     next if $drop_list && grep { $key eq $_ } @$drop_list;
-    next if $spec->{$key}; # we handled it
+    next if exists $spec->{$key}; # we handled it
     $new_data->{ $customizer->($key) } = $data->{$key};
   }
 
@@ -1232,7 +1243,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101580
+version 2.101590
 
 =head1 SYNOPSIS
 

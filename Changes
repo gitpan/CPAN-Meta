@@ -1,5 +1,13 @@
 Revision history for CPAN-Meta
 
+2.101590  2010-06-07 21:49:36 EST5EDT
+
+  - won't automatically add 'unknown' as repository type when converting; 
+    instead, will only add a repository type if a repository 'url' is
+    present and it is of the 'svn:' or 'git:' scheme.
+
+  - squelched some uninitialized value warnings [Graham Barr]
+
 2.101580  2010-06-07 16:44:13 EST5EDT
 
   - add "lazy_validation" option to constructors

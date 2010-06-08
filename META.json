@@ -56,7 +56,7 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.101580",
+   "version" : "2.101590",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
