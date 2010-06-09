@@ -40,6 +40,7 @@ t/data-bad/META-1_2.yml
 t/data-bad/META-1_3.yml
 t/data-bad/META-1_4.yml
 t/data-bad/META-2.json
+t/data-bad/restrictive-2.json
 t/data-fail/META-1_0.yml
 t/data-fail/META-1_1.yml
 t/data-fail/META-1_2.yml
@@ -52,6 +53,8 @@ t/data/META-1_2.yml
 t/data/META-1_3.yml
 t/data/META-1_4.yml
 t/data/META-2.json
+t/data/restricted-2.json
+t/data/restrictive-1_4.yml
 t/load-bad.t
 t/meta-obj.t
 t/no-index.t

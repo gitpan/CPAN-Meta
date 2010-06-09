@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101591';
+  $CPAN::Meta::Converter::VERSION = '2.101600';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -141,6 +141,7 @@ my %license_map_2 = (
   lgpl => 'lgpl_2_1',
   mozilla => 'mozilla_1_0',
   perl => 'perl_5',
+  restrictive => 'restricted',
 );
 
 sub _license_2 {
@@ -182,7 +183,7 @@ my %license_downgrade_map = qw(
   sun               open_source
   zlib              open_source
   open_source       open_source
-  restricted        restricted
+  restricted        restrictive
   unrestricted      unrestricted
   unknown           unknown
 );
@@ -194,18 +195,13 @@ sub _downgrade_license {
   }
   elsif( ref $element eq 'ARRAY' ) {
     if ( @$element == 1 ) {
-      return $license_downgrade_map{$element->[0]};
-    }
-    else {
-      return 'unknown';
+      return $license_downgrade_map{$element->[0]} || "unknown";
     }
   }
   elsif ( ! ref $element ) {
-    return $license_downgrade_map{$element};
+    return $license_downgrade_map{$element} || "unknown";
   }
-  else {
-    return "unknown";
-  }
+  return "unknown";
 }
 
 my $no_index_spec_1_2 = {
@@ -1243,7 +1239,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101591
+version 2.101600
 
 =head1 SYNOPSIS
 

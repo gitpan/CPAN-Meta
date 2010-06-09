@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Spec;
 BEGIN {
-  $CPAN::Meta::Spec::VERSION = '2.101591';
+  $CPAN::Meta::Spec::VERSION = '2.101600';
 }
 # ABSTRACT: specification for CPAN distribution metadata
 1;
@@ -21,7 +21,7 @@ CPAN::Meta::Spec - specification for CPAN distribution metadata
 
 =head1 VERSION
 
-version 2.101591
+version 2.101600
 
 =head1 SYNOPSIS
 
