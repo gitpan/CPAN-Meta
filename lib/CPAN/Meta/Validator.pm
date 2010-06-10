@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Validator;
 BEGIN {
-  $CPAN::Meta::Validator::VERSION = '2.101600';
+  $CPAN::Meta::Validator::VERSION = '2.101610';
 }
 # ABSTRACT: validate CPAN distribution metadata structures
 
@@ -692,8 +692,7 @@ my %v1_licenses = (
     'gpl'          => 'http://www.opensource.org/licenses/gpl-license.php',
     'apache'       => 'http://apache.org/licenses/LICENSE-2.0',
     'artistic'     => 'http://opensource.org/licenses/artistic-license.php',
-    'artistic2'    => 'http://opensource.org/licenses/artistic-license-2.0.php',
-    'artistic-2.0' => 'http://opensource.org/licenses/artistic-license-2.0.php',
+    'artistic_2'   => 'http://opensource.org/licenses/artistic-license-2.0.php',
     'lgpl'         => 'http://www.opensource.org/licenses/lgpl-license.phpt',
     'bsd'          => 'http://www.opensource.org/licenses/bsd-license.php',
     'gpl'          => 'http://www.opensource.org/licenses/gpl-license.php',
@@ -841,7 +840,7 @@ CPAN::Meta::Validator - validate CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101600
+version 2.101610
 
 =head1 SYNOPSIS
 

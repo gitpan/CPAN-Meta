@@ -22,6 +22,7 @@ lib/CPAN/Meta/Validator.pm
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
+t/data-bad/107650337-META.yml
 t/data-bad/1122575719-META.yml
 t/data-bad/1206545041-META.yml
 t/data-bad/1598804075-META.yml

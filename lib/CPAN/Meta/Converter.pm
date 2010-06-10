@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101600';
+  $CPAN::Meta::Converter::VERSION = '2.101610';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -79,8 +79,7 @@ my @valid_licenses_1 = (
   'gpl',
   'apache',
   'artistic',
-  'artistic2',
-  'artistic-2.0',
+  'artistic_2',
   'lgpl',
   'bsd',
   'gpl',
@@ -92,13 +91,16 @@ my @valid_licenses_1 = (
   'unknown',
 );
 
-my %license_map_1 = ( map { $_ => 1 } @valid_licenses_1 );
+my %license_map_1 = (
+  ( map { $_ => $_ } @valid_licenses_1 ),
+  artistic2 => 'artistic_2',
+);
 
 sub _license_1 {
   my ($element) = @_;
   return 'unknown' unless defined $element;
   if ( $license_map_1{lc $element} ) {
-    return lc $element;
+    return $license_map_1{lc $element};
   }
   return 'unknown';
 }
@@ -137,6 +139,7 @@ my %license_map_2 = (
   ( map { $_ => $_ } @valid_licenses_2 ),
   apache => 'apache_2_0',
   artistic => 'artistic_1',
+  artistic2 => 'artistic_2',
   gpl => 'gpl_1',
   lgpl => 'lgpl_2_1',
   mozilla => 'mozilla_1_0',
@@ -163,7 +166,7 @@ my %license_downgrade_map = qw(
   apache_1_1        apache
   apache_2_0        apache
   artistic_1        artistic
-  artistic_2        artistic2
+  artistic_2        artistic_2
   bsd               bsd
   freebsd           open_source
   gfdl_1_2          open_source
@@ -1239,7 +1242,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101600
+version 2.101610
 
 =head1 SYNOPSIS
 

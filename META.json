@@ -56,13 +56,13 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.101600",
+   "version" : "2.101610",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
             "class" : "Dist::Zilla::Plugin::MetaNoIndex",
             "name" : "MetaNoIndex",
-            "version" : "0.0200"
+            "version" : "1.101550"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckExtraTests",
