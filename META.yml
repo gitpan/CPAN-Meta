@@ -33,7 +33,7 @@ requires:
   version: 0.82
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.101610
+version: 2.101670
 x_Dist_Zilla:
   plugins:
     -

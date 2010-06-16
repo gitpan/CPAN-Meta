@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.101610';
+  $CPAN::Meta::Converter::VERSION = '2.101670';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -547,7 +547,7 @@ my $resource2_upgrade = {
     elsif( _is_urlish($item) ) { return { web => $_[0] } }
     else { return undef }
   },
-  repository => sub { return _is_urlish($_[0]) ? { web => $_[0] } : undef },
+  repository => sub { return _is_urlish($_[0]) ? { url => $_[0] } : undef },
   ':custom'  => \&_prefix_custom,
 };
 
@@ -1242,7 +1242,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.101610
+version 2.101670
 
 =head1 SYNOPSIS
 
