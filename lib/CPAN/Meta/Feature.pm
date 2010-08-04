@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Feature;
 BEGIN {
-  $CPAN::Meta::Feature::VERSION = '2.101670';
+  $CPAN::Meta::Feature::VERSION = '2.102160';
 }
 # ABSTRACT: an optional feature provided by a CPAN distribution
 
@@ -44,7 +44,7 @@ CPAN::Meta::Feature - an optional feature provided by a CPAN distribution
 
 =head1 VERSION
 
-version 2.101670
+version 2.102160
 
 =head1 DESCRIPTION
 

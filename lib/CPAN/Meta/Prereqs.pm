@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Prereqs;
 BEGIN {
-  $CPAN::Meta::Prereqs::VERSION = '2.101670';
+  $CPAN::Meta::Prereqs::VERSION = '2.102160';
 }
 # ABSTRACT: a set of distribution prerequisites by phase and type
 
@@ -151,7 +151,7 @@ CPAN::Meta::Prereqs - a set of distribution prerequisites by phase and type
 
 =head1 VERSION
 
-version 2.101670
+version 2.102160
 
 =head1 DESCRIPTION
 

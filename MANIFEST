@@ -54,6 +54,7 @@ t/data/META-1_2.yml
 t/data/META-1_3.yml
 t/data/META-1_4.yml
 t/data/META-2.json
+t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
 t/load-bad.t
