@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Feature;
 BEGIN {
-  $CPAN::Meta::Feature::VERSION = '2.102160';
+  $CPAN::Meta::Feature::VERSION = '2.102400';
 }
 # ABSTRACT: an optional feature provided by a CPAN distribution
 
@@ -44,7 +44,7 @@ CPAN::Meta::Feature - an optional feature provided by a CPAN distribution
 
 =head1 VERSION
 
-version 2.102160
+version 2.102400
 
 =head1 DESCRIPTION
 
@@ -89,8 +89,17 @@ existing test-file that illustrates the bug or desired feature.
 
 =head1 AUTHORS
 
-  David Golden <dagolden@cpan.org>
-  Ricardo Signes <rjbs@cpan.org>
+=over 4
+
+=item *
+
+David Golden <dagolden@cpan.org>
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

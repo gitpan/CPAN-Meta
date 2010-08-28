@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.102160';
+  $CPAN::Meta::VERSION = '2.102400';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -299,7 +299,11 @@ sub feature {
 
 sub as_struct {
   my ($self) = @_;
-  return Storable::dclone($self);
+  return JSON->new->decode( JSON->new->convert_blessed->encode( $self ) )
+}
+
+sub TO_JSON {
+  return { %{ $_[0] } };
 }
 
 1;
@@ -314,7 +318,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.102160
+version 2.102400
 
 =head1 SYNOPSIS
 
@@ -604,8 +608,17 @@ L<CPAN::Meta::Validator>
 
 =head1 AUTHORS
 
-  David Golden <dagolden@cpan.org>
-  Ricardo Signes <rjbs@cpan.org>
+=over 4
+
+=item *
+
+David Golden <dagolden@cpan.org>
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
