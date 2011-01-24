@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Validator;
 BEGIN {
-  $CPAN::Meta::Validator::VERSION = '2.102400';
+  $CPAN::Meta::Validator::VERSION = '2.110240';
 }
 # ABSTRACT: validate CPAN distribution metadata structures
 
@@ -840,7 +840,7 @@ CPAN::Meta::Validator - validate CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.102400
+version 2.110240
 
 =head1 SYNOPSIS
 

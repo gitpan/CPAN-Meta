@@ -16,7 +16,8 @@ my %WriteMakefileArgs = (
     'File::Spec' => '0',
     'File::Temp' => '0.20',
     'IO::Dir' => '0',
-    'Test::More' => '0.88'
+    'Parse::CPAN::Meta' => '1.4200',
+    'Test::More' => '0.96'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -27,15 +28,16 @@ my %WriteMakefileArgs = (
   'NAME' => 'CPAN::Meta',
   'PREREQ_PM' => {
     'Carp' => '0',
-    'JSON' => '2',
-    'Parse::CPAN::Meta' => '0',
+    'JSON::PP' => '2.27103',
+    'Module::Load::Conditional' => '0',
+    'Parse::CPAN::Meta' => '1.4200',
     'Scalar::Util' => '0',
     'Storable' => '0',
     'Version::Requirements' => '0.101020',
     'autodie' => '0',
     'version' => '0.82'
   },
-  'VERSION' => '2.102400',
+  'VERSION' => '2.110240',
   'test' => {
     'TESTS' => 't/*.t'
   }
