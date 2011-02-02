@@ -1,5 +1,14 @@
 Revision history for CPAN-Meta
 
+2.110330  2011-02-02 09:42:57 EST5EDT
+
+  [ENHANCEMENTS]
+
+  - Saved META.json files are now sorted by key
+
+  - as_struct() method takes an optional "version" argument to return
+    a down-converted metadata hashref
+
 2.110320  2011-01-31 23:14:30 EST5EDT
 
   [ENHANCEMENTS]

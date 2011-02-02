@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.110320';
+  $CPAN::Meta::VERSION = '2.110330';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -212,7 +212,7 @@ sub save {
   if ( $version ge '2' ) {
     carp "'$file' should end in '.json'"
       unless $file =~ m{\.json$};
-    $data = _choose_json_backend()->new->utf8->pretty->encode($struct);
+    $data = _choose_json_backend()->new->utf8->pretty->canonical->encode($struct);
   }
   else {
     carp "'$file' should end in '.yml'"
@@ -337,9 +337,14 @@ sub feature {
 
 
 sub as_struct {
-  my ($self) = @_;
+  my ($self, $options) = @_;
   my $json = _choose_json_backend();
-  return $json->new->decode( $json->new->convert_blessed->encode( $self ) )
+  my $struct = $json->new->decode($json->new->convert_blessed->encode($self));
+  if ( $options->{version} ) {
+    my $cmc = CPAN::Meta::Converter->new( $struct );
+    $struct = $cmc->convert( version => $options->{version} );
+  }
+  return $struct;
 }
 
 # Used by JSON::PP, etc. for "convert_blessed"
@@ -359,7 +364,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.110320
+version 2.110330
 
 =head1 SYNOPSIS
 
@@ -403,7 +408,7 @@ Returns a valid CPAN::Meta object or dies if the supplied metadata hash
 reference fails to validate.  Older-format metadata will be up-converted to
 version 2 if they validate against the original stated specification.
 
-Valid options include:
+It takes an optional hashref of options. Valid options include:
 
 =over
 
@@ -419,7 +424,7 @@ dropped.)  The default is false.
 
 =head2 create
 
-  my $meta = CPAN::Meta->create($distmeta_struct);
+  my $meta = CPAN::Meta->create($distmeta_struct, \%options);
 
 This is same as C<new()>, except that C<generated_by> and C<meta-spec> fields
 will be generated if not provided.  This means the metadata structure is
@@ -523,14 +528,14 @@ exception will be raised.
 
 =head2 as_struct
 
-  my $copy = $meta->as_struct;
+  my $copy = $meta->as_struct( \%options );
 
 This method returns a deep copy of the object's metadata as an unblessed has
-reference.  This is useful for raw analysis or for passing to a converter
-object.  For example:
+reference.  It takes an optional hashref of options.  If the hashref contains
+a C<version> argument, the copied metadata will be converted to the version
+of the specification and returned.  For example:
 
-  my $cmc = CPAN::Meta::Converter->new( $meta->as_struct );
-  my $meta_1_4 = $cmc->convert( version => "1.4" );
+  my $old_spec = $meta->as_struct( {version => "1.4"} );
 
 =head1 STRING DATA
 
