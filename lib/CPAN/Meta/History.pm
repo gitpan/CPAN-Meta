@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::History;
 BEGIN {
-  $CPAN::Meta::History::VERSION = '2.110330';
+  $CPAN::Meta::History::VERSION = '2.110350';
 }
 # ABSTRACT: history of CPAN Meta Spec changes
 1;
@@ -21,7 +21,7 @@ CPAN::Meta::History - history of CPAN Meta Spec changes
 
 =head1 VERSION
 
-version 2.110330
+version 2.110350
 
 =head1 DESCRIPTION
 
@@ -293,17 +293,8 @@ Included 'name', 'version', 'license', 'distribution_type', 'requires',
 
 =head1 AUTHORS
 
-=over 4
-
-=item *
-
-David Golden <dagolden@cpan.org>
-
-=item *
-
-Ricardo Signes <rjbs@cpan.org>
-
-=back
+  David Golden <dagolden@cpan.org>
+  Ricardo Signes <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

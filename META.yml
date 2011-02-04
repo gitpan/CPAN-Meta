@@ -8,12 +8,11 @@ build_requires:
   File::Spec: 0
   File::Temp: 0.20
   IO::Dir: 0
-  Parse::CPAN::Meta: 1.4200
   Test::More: 0.96
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110320'
+generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.110330'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -24,9 +23,7 @@ no_index:
     - history
 requires:
   Carp: 0
-  JSON::PP: 2.27103
-  Module::Load::Conditional: 0
-  Parse::CPAN::Meta: 1.4200
+  Parse::CPAN::Meta: 1.43
   Scalar::Util: 0
   Storable: 0
   Version::Requirements: 0.101020
@@ -35,13 +32,13 @@ requires:
   version: 0.82
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.110330
+version: 2.110350
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
       name: MetaNoIndex
-      version: 1.101550
+      version: 1.101200
     -
       class: Dist::Zilla::Plugin::CheckExtraTests
       name: CheckExtraTests
@@ -49,7 +46,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
       name: CheckChangesHasContent
-      version: 0.003
+      version: 0.002
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Filter/@Basic/GatherDir'
@@ -129,7 +126,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Repository
       name: '@Filter/Repository'
-      version: 0.17
+      version: 0.13
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:
@@ -141,31 +138,23 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@Filter/PodWeaver'
-      version: 3.101641
+      version: 3.101530
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@Filter/@Git/Check'
-      version: 1.103520
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@Filter/@Git/Commit'
-      version: 1.103520
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@Filter/@Git/Tag'
-      version: 1.103520
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@Filter/@Git/Push'
-      version: 1.103520
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
-          type: requires
-      name: Prereqs
-      version: 4.200001
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::AutoVersion
       name: AutoVersion
@@ -173,7 +162,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: Git::Push
-      version: 1.103520
+      version: 1.101230
     -
       class: Dist::Zilla::Plugin::MetaResources
       name: MetaResources

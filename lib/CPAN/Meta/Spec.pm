@@ -5,7 +5,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Spec;
 BEGIN {
-  $CPAN::Meta::Spec::VERSION = '2.110330';
+  $CPAN::Meta::Spec::VERSION = '2.110350';
 }
 # ABSTRACT: specification for CPAN distribution metadata
 1;
@@ -21,7 +21,7 @@ CPAN::Meta::Spec - specification for CPAN distribution metadata
 
 =head1 VERSION
 
-version 2.110330
+version 2.110350
 
 =head1 SYNOPSIS
 
@@ -1123,17 +1123,8 @@ of contributors in the repository history currently includes:
 
 =head1 AUTHORS
 
-=over 4
-
-=item *
-
-David Golden <dagolden@cpan.org>
-
-=item *
-
-Ricardo Signes <rjbs@cpan.org>
-
-=back
+  David Golden <dagolden@cpan.org>
+  Ricardo Signes <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

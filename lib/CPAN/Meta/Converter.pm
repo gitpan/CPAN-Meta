@@ -4,7 +4,7 @@ use warnings;
 use autodie;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.110330';
+  $CPAN::Meta::Converter::VERSION = '2.110350';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -1243,7 +1243,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.110330
+version 2.110350
 
 =head1 SYNOPSIS
 
@@ -1339,17 +1339,8 @@ existing test-file that illustrates the bug or desired feature.
 
 =head1 AUTHORS
 
-=over 4
-
-=item *
-
-David Golden <dagolden@cpan.org>
-
-=item *
-
-Ricardo Signes <rjbs@cpan.org>
-
-=back
+  David Golden <dagolden@cpan.org>
+  Ricardo Signes <rjbs@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
