@@ -31,10 +31,9 @@ my %WriteMakefileArgs = (
     'Scalar::Util' => '0',
     'Storable' => '0',
     'Version::Requirements' => '0.101020',
-    'autodie' => '0',
     'version' => '0.82'
   },
-  'VERSION' => '2.110350',
+  'VERSION' => '2.110360',
   'test' => {
     'TESTS' => 't/*.t'
   }

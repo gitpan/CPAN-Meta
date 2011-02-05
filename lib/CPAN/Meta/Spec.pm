@@ -2,10 +2,9 @@
 use 5.006;
 use strict;
 use warnings;
-use autodie;
 package CPAN::Meta::Spec;
 BEGIN {
-  $CPAN::Meta::Spec::VERSION = '2.110350';
+  $CPAN::Meta::Spec::VERSION = '2.110360';
 }
 # ABSTRACT: specification for CPAN distribution metadata
 1;
@@ -21,7 +20,7 @@ CPAN::Meta::Spec - specification for CPAN distribution metadata
 
 =head1 VERSION
 
-version 2.110350
+version 2.110360
 
 =head1 SYNOPSIS
 

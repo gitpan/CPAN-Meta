@@ -2,10 +2,9 @@
 use 5.006;
 use strict;
 use warnings;
-use autodie;
 package CPAN::Meta::History;
 BEGIN {
-  $CPAN::Meta::History::VERSION = '2.110350';
+  $CPAN::Meta::History::VERSION = '2.110360';
 }
 # ABSTRACT: history of CPAN Meta Spec changes
 1;
@@ -21,7 +20,7 @@ CPAN::Meta::History - history of CPAN Meta Spec changes
 
 =head1 VERSION
 
-version 2.110350
+version 2.110360
 
 =head1 DESCRIPTION
 

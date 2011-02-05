@@ -1,10 +1,9 @@
 use 5.006;
 use strict;
 use warnings;
-use autodie;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.110350';
+  $CPAN::Meta::VERSION = '2.110360';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -205,9 +204,13 @@ sub save {
 
   my $data = $self->as_string( $options );
 
-  open my $fh, ">", $file;
+  open my $fh, ">", $file
+    or die "Error opening '$file' for writing: $!\n";
   print {$fh} $data;
-  close $fh;
+  close $fh
+    or die "Error closing '$file': $!\n";
+
+  return;
 }
 
 
@@ -345,7 +348,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.110350
+version 2.110360
 
 =head1 SYNOPSIS
 
