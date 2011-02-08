@@ -3,7 +3,7 @@ use strict;
 use warnings;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.110360';
+  $CPAN::Meta::VERSION = '2.110390';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -210,7 +210,7 @@ sub save {
   close $fh
     or die "Error closing '$file': $!\n";
 
-  return;
+  return 1;
 }
 
 
@@ -348,7 +348,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.110360
+version 2.110390
 
 =head1 SYNOPSIS
 
@@ -666,8 +666,17 @@ L<CPAN::Meta::Validator>
 
 =head1 AUTHORS
 
-  David Golden <dagolden@cpan.org>
-  Ricardo Signes <rjbs@cpan.org>
+=over 4
+
+=item *
+
+David Golden <dagolden@cpan.org>
+
+=item *
+
+Ricardo Signes <rjbs@cpan.org>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
