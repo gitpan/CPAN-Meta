@@ -3,7 +3,7 @@ use strict;
 use warnings;
 package CPAN::Meta::Prereqs;
 BEGIN {
-  $CPAN::Meta::Prereqs::VERSION = '2.110390';
+  $CPAN::Meta::Prereqs::VERSION = '2.110420';
 }
 # ABSTRACT: a set of distribution prerequisites by phase and type
 
@@ -150,7 +150,7 @@ CPAN::Meta::Prereqs - a set of distribution prerequisites by phase and type
 
 =head1 VERSION
 
-version 2.110390
+version 2.110420
 
 =head1 DESCRIPTION
 

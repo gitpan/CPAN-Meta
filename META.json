@@ -5,7 +5,7 @@
       "Ricardo Signes <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200002, CPAN::Meta::Converter version 2.110390",
+   "generated_by" : "Dist::Zilla version 4.200002, CPAN::Meta::Converter version 2.110420",
    "license" : [
       "perl_5"
    ],
@@ -54,7 +54,7 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.110390",
+   "version" : "2.110420",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

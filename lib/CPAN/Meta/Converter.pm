@@ -3,7 +3,7 @@ use strict;
 use warnings;
 package CPAN::Meta::Converter;
 BEGIN {
-  $CPAN::Meta::Converter::VERSION = '2.110390';
+  $CPAN::Meta::Converter::VERSION = '2.110420';
 }
 # ABSTRACT: Convert CPAN distribution metadata structures
 
@@ -1242,7 +1242,7 @@ CPAN::Meta::Converter - Convert CPAN distribution metadata structures
 
 =head1 VERSION
 
-version 2.110390
+version 2.110420
 
 =head1 SYNOPSIS
 
