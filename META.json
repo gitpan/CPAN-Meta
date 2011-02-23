@@ -28,7 +28,7 @@
       "runtime" : {
          "requires" : {
             "Carp" : 0,
-            "Parse::CPAN::Meta" : "1.44",
+            "Parse::CPAN::Meta" : "1.4400",
             "Scalar::Util" : 0,
             "Storable" : 0,
             "Version::Requirements" : "0.101020",
@@ -42,7 +42,6 @@
             "File::Spec" : 0,
             "File::Temp" : "0.20",
             "IO::Dir" : 0,
-            "Parse::CPAN::Meta" : "1.4400",
             "Test::More" : "0.96"
          }
       }
@@ -55,7 +54,7 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.110440",
+   "version" : "2.110540",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

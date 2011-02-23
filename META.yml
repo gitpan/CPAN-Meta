@@ -8,7 +8,6 @@ build_requires:
   File::Spec: 0
   File::Temp: 0.20
   IO::Dir: 0
-  Parse::CPAN::Meta: 1.4400
   Test::More: 0.96
 configure_requires:
   ExtUtils::MakeMaker: 6.31
@@ -24,7 +23,7 @@ no_index:
     - history
 requires:
   Carp: 0
-  Parse::CPAN::Meta: 1.44
+  Parse::CPAN::Meta: 1.4400
   Scalar::Util: 0
   Storable: 0
   Version::Requirements: 0.101020
@@ -32,7 +31,7 @@ requires:
   version: 0.82
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.110440
+version: 2.110540
 x_Dist_Zilla:
   plugins:
     -
