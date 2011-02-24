@@ -3,7 +3,7 @@ use strict;
 use warnings;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.110540';
+  $CPAN::Meta::VERSION = '2.110550';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -349,7 +349,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.110540
+version 2.110550
 
 =head1 SYNOPSIS
 

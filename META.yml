@@ -31,7 +31,7 @@ requires:
   version: 0.82
 resources:
   repository: http://github.com/dagolden/cpan-meta.git
-version: 2.110540
+version: 2.110550
 x_Dist_Zilla:
   plugins:
     -
