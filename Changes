@@ -1,5 +1,16 @@
 Revision history for CPAN-Meta
 
+2.110580  2011-02-27 07:58:06 EST5EDT
+
+  [OTHER]
+
+  - Add explicit dependencies on JSON::PP and CPAN::Meta::YAML instead
+    of relying on Parse::CPAN::Meta to provide them (as some CPAN Testers
+    have had P::C::M installed without them somehow)
+
+  - Removed dependency on Storable as it was not a core module
+    until Perl 5.8
+
 2.110550  2011-02-24 07:17:57 EST5EDT
 
   [OTHER]

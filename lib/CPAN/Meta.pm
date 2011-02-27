@@ -3,7 +3,7 @@ use strict;
 use warnings;
 package CPAN::Meta;
 BEGIN {
-  $CPAN::Meta::VERSION = '2.110550';
+  $CPAN::Meta::VERSION = '2.110580';
 }
 # ABSTRACT: the distribution metadata for a CPAN dist
 
@@ -14,6 +14,14 @@ use CPAN::Meta::Prereqs;
 use CPAN::Meta::Converter;
 use CPAN::Meta::Validator;
 use Parse::CPAN::Meta 1.4400 ();
+
+sub _dclone {
+  my $ref = shift;
+  my $backend = Parse::CPAN::Meta->json_backend();
+  return $backend->new->decode(
+    $backend->new->convert_blessed->encode($ref)
+  );
+}
 
 
 BEGIN {
@@ -47,7 +55,7 @@ BEGIN {
       my $value = $_[0]{ $attr };
       croak "$attr must be called in list context"
         unless wantarray;
-      return @{ Storable::dclone($value) } if ref $value;
+      return @{ _dclone($value) } if ref $value;
       return $value;
     };
   }
@@ -73,7 +81,7 @@ BEGIN {
     (my $subname = $attr) =~ s/-/_/;
     *$subname = sub {
       my $value = $_[0]{ $attr };
-      return Storable::dclone($value) if $value;
+      return _dclone($value) if $value;
       return {};
     };
   }
@@ -87,7 +95,7 @@ sub custom_keys {
 sub custom {
   my ($self, $attr) = @_;
   my $value = $self->{$attr};
-  return Storable::dclone($value) if ref $value;
+  return _dclone($value) if ref $value;
   return $value;
 }
 
@@ -290,10 +298,7 @@ sub feature {
 
 sub as_struct {
   my ($self, $options) = @_;
-  my $backend = Parse::CPAN::Meta->json_backend();
-  my $struct = $backend->new->decode(
-    $backend->new->convert_blessed->encode($self)
-  );
+  my $struct = _dclone($self);
   if ( $options->{version} ) {
     my $cmc = CPAN::Meta::Converter->new( $struct );
     $struct = $cmc->convert( version => $options->{version} );
@@ -349,7 +354,7 @@ CPAN::Meta - the distribution metadata for a CPAN dist
 
 =head1 VERSION
 
-version 2.110550
+version 2.110580
 
 =head1 SYNOPSIS
 

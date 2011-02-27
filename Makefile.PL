@@ -26,14 +26,15 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'CPAN::Meta',
   'PREREQ_PM' => {
+    'CPAN::Meta::YAML' => '0.002',
     'Carp' => '0',
+    'JSON::PP' => '2.27103',
     'Parse::CPAN::Meta' => '1.4400',
     'Scalar::Util' => '0',
-    'Storable' => '0',
     'Version::Requirements' => '0.101020',
     'version' => '0.82'
   },
-  'VERSION' => '2.110550',
+  'VERSION' => '2.110580',
   'test' => {
     'TESTS' => 't/*.t'
   }
