@@ -1,5 +1,12 @@
 Revision history for CPAN-Meta
 
+2.110910  2011-04-01 08:55:30 America/New_York
+
+  [ENHANCEMENTS]
+
+  - The 1.x spec "gpl" and "lgpl" and "mozilla" license values now up-convert
+    to "open_source" because they indicate too non-specific a license.
+
 2.110580  2011-02-27 07:58:06 EST5EDT
 
   [OTHER]
