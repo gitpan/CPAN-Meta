@@ -5,6 +5,7 @@ META.json
 META.yml
 Makefile.PL
 README
+README.PATCHING
 Todo
 dist.ini
 history/META-spec-1_0.html
@@ -19,6 +20,7 @@ lib/CPAN/Meta/History.pm
 lib/CPAN/Meta/Prereqs.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
+t/00-compile.t
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
@@ -67,4 +69,8 @@ t/prereqs.t
 t/repository.t
 t/save-load.t
 t/validator.t
+xt/release/distmeta.t
+xt/release/pod-coverage.t
 xt/release/pod-syntax.t
+xt/release/portability.t
+xt/release/test-version.t
