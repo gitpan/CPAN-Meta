@@ -2,43 +2,46 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.008;
 
 use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'the distribution metadata for a CPAN dist',
-  'AUTHOR' => 'David Golden <dagolden@cpan.org>, Ricardo Signes <rjbs@cpan.org>',
-  'BUILD_REQUIRES' => {
-    'Data::Dumper' => '0',
-    'File::Find' => '0',
-    'File::Spec' => '0',
-    'File::Temp' => '0.20',
-    'IO::Dir' => '0',
-    'Test::More' => '0.88',
-    'overload' => '0'
+  "ABSTRACT" => "the distribution metadata for a CPAN dist",
+  "AUTHOR" => "David Golden <dagolden\@cpan.org>, Ricardo Signes <rjbs\@cpan.org>",
+  "BUILD_REQUIRES" => {
+    "Data::Dumper" => 0,
+    "File::Find" => 0,
+    "File::Spec" => 0,
+    "File::Temp" => "0.20",
+    "IO::Dir" => 0,
+    "Test::More" => "0.88",
+    "overload" => 0,
+    "utf8" => 0
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'CPAN-Meta',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'CPAN::Meta',
-  'PREREQ_PM' => {
-    'CPAN::Meta::YAML' => '0.002',
-    'Carp' => '0',
-    'JSON::PP' => '2.27103',
-    'Parse::CPAN::Meta' => '1.4400',
-    'Scalar::Util' => '0',
-    'Version::Requirements' => '0.101020',
-    'version' => '0.82'
+  "DISTNAME" => "CPAN-Meta",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "CPAN::Meta",
+  "PREREQ_PM" => {
+    "CPAN::Meta::YAML" => "0.002",
+    "Carp" => 0,
+    "JSON::PP" => "2.27103",
+    "Parse::CPAN::Meta" => "1.4400",
+    "Scalar::Util" => 0,
+    "Version::Requirements" => "0.101020",
+    "strict" => 0,
+    "version" => "0.82",
+    "warnings" => 0
   },
-  'VERSION' => '2.112150',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "2.112580",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

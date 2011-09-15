@@ -5,7 +5,7 @@
       "Ricardo Signes <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.200009, CPAN::Meta::Converter version 2.110930",
+   "generated_by" : "Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.112150",
    "license" : [
       "perl_5"
    ],
@@ -33,8 +33,10 @@
             "Parse::CPAN::Meta" : "1.4400",
             "Scalar::Util" : 0,
             "Version::Requirements" : "0.101020",
-            "perl" : "5.006",
-            "version" : "0.82"
+            "perl" : "5.008",
+            "strict" : 0,
+            "version" : "0.82",
+            "warnings" : 0
          }
       },
       "test" : {
@@ -45,38 +47,39 @@
             "File::Temp" : "0.20",
             "IO::Dir" : 0,
             "Test::More" : "0.88",
-            "overload" : 0
+            "overload" : 0,
+            "utf8" : 0
          }
       }
    },
    "provides" : {
       "CPAN::Meta" : {
          "file" : "lib/CPAN/Meta.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::Converter" : {
          "file" : "lib/CPAN/Meta/Converter.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::Feature" : {
          "file" : "lib/CPAN/Meta/Feature.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::History" : {
          "file" : "lib/CPAN/Meta/History.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::Prereqs" : {
          "file" : "lib/CPAN/Meta/Prereqs.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::Spec" : {
          "file" : "lib/CPAN/Meta/Spec.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       },
       "CPAN::Meta::Validator" : {
          "file" : "lib/CPAN/Meta/Validator.pm",
-         "version" : "2.112150"
+         "version" : "2.112580"
       }
    },
    "release_status" : "stable",
@@ -85,13 +88,13 @@
          "mailto" : "bug-cpan-meta at rt.cpan.org",
          "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta"
       },
-      "homepage" : "http://github.com/dagolden/cpan-meta",
+      "homepage" : "https://github.com/dagolden/cpan-meta",
       "repository" : {
          "type" : "git",
          "url" : "git://github.com/dagolden/cpan-meta.git",
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.112150"
+   "version" : "2.112580"
 }
 

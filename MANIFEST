@@ -60,6 +60,7 @@ t/data/gpl-1_4.yml
 t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
+t/data/unicode.yml
 t/load-bad.t
 t/meta-obj.t
 t/no-index.t
