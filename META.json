@@ -55,31 +55,31 @@
    "provides" : {
       "CPAN::Meta" : {
          "file" : "lib/CPAN/Meta.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::Converter" : {
          "file" : "lib/CPAN/Meta/Converter.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::Feature" : {
          "file" : "lib/CPAN/Meta/Feature.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::History" : {
          "file" : "lib/CPAN/Meta/History.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::Prereqs" : {
          "file" : "lib/CPAN/Meta/Prereqs.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::Spec" : {
          "file" : "lib/CPAN/Meta/Spec.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       },
       "CPAN::Meta::Validator" : {
          "file" : "lib/CPAN/Meta/Validator.pm",
-         "version" : "2.112600"
+         "version" : "2.112620"
       }
    },
    "release_status" : "stable",
@@ -95,6 +95,6 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.112600"
+   "version" : "2.112620"
 }
 
