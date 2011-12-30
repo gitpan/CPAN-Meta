@@ -18,9 +18,12 @@ lib/CPAN/Meta/Converter.pm
 lib/CPAN/Meta/Feature.pm
 lib/CPAN/Meta/History.pm
 lib/CPAN/Meta/Prereqs.pm
+lib/CPAN/Meta/Requirements.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
 t/00-compile.t
+t/accepts.t
+t/basic.t
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
@@ -61,7 +64,10 @@ t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
 t/data/unicode.yml
+t/finalize.t
+t/from-hash.t
 t/load-bad.t
+t/merge.t
 t/meta-obj.t
 t/no-index.t
 t/prereqs-finalize.t
@@ -70,6 +76,8 @@ t/prereqs.t
 t/repository.t
 t/save-load.t
 t/validator.t
+xt/author/critic.t
+xt/author/pod-spell.t
 xt/release/distmeta.t
 xt/release/pod-coverage.t
 xt/release/pod-syntax.t

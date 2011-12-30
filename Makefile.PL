@@ -34,12 +34,11 @@ my %WriteMakefileArgs = (
     "JSON::PP" => "2.27103",
     "Parse::CPAN::Meta" => "1.4400",
     "Scalar::Util" => 0,
-    "Version::Requirements" => "0.101020",
     "strict" => 0,
     "version" => "0.82",
     "warnings" => 0
   },
-  "VERSION" => "2.112621",
+  "VERSION" => "2.113640",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.112621
+    version 2.113640
 
 SYNOPSIS
       my $meta = CPAN::Meta->load_file('META.json');
@@ -247,10 +247,9 @@ SEE ALSO
 
 SUPPORT
   Bugs / Feature Requests
-    Please report any bugs or feature requests by email to "bug-cpan-meta at
-    rt.cpan.org", or through the web interface at
+    Please report any bugs or feature requests through the issue tracker at
     <http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta>. You will
-    be automatically notified of any progress on the request by the system.
+    be notified automatically of any progress on your issue.
 
   Source Code
     This is open source software. The code repository is available for
