@@ -21,6 +21,7 @@ lib/CPAN/Meta/Prereqs.pm
 lib/CPAN/Meta/Requirements.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
+perlcritic.rc
 t/00-compile.t
 t/accepts.t
 t/basic.t
