@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.120350
+    version 2.120351
 
 SYNOPSIS
       my $meta = CPAN::Meta->load_file('META.json');
