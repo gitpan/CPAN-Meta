@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package CPAN::Meta::Requirements;
-our $VERSION = '2.120351'; # VERSION
+our $VERSION = '2.120530'; # VERSION
 # ABSTRACT: a set of version requirements for a CPAN dist
 
 
@@ -384,7 +384,7 @@ CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 =head1 VERSION
 
-version 2.120351
+version 2.120530
 
 =head1 SYNOPSIS
 

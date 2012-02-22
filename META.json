@@ -5,7 +5,7 @@
       "Ricardo Signes <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300003, CPAN::Meta::Converter version 2.113640",
+   "generated_by" : "Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120351",
    "license" : [
       "perl_5"
    ],
@@ -28,69 +28,61 @@
       "runtime" : {
          "requires" : {
             "CPAN::Meta::YAML" : "0.002",
-            "Carp" : 0,
+            "Carp" : "0",
             "JSON::PP" : "2.27103",
             "Parse::CPAN::Meta" : "1.4400",
-            "Scalar::Util" : 0,
-            "perl" : "5.008",
-            "strict" : 0,
+            "Scalar::Util" : "0",
+            "perl" : "5.006",
+            "strict" : "0",
             "version" : "0.82",
-            "warnings" : 0
+            "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
-            "Data::Dumper" : 0,
-            "File::Find" : 0,
-            "File::Spec" : 0,
+            "Data::Dumper" : "0",
+            "File::Find" : "0",
+            "File::Spec" : "0",
             "File::Temp" : "0.20",
-            "IO::Dir" : 0,
+            "IO::Dir" : "0",
             "Test::More" : "0.88",
-            "overload" : 0,
-            "utf8" : 0
+            "overload" : "0",
+            "utf8" : "0"
          }
       }
    },
    "provides" : {
       "CPAN::Meta" : {
          "file" : "lib/CPAN/Meta.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Converter" : {
          "file" : "lib/CPAN/Meta/Converter.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Feature" : {
          "file" : "lib/CPAN/Meta/Feature.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::History" : {
          "file" : "lib/CPAN/Meta/History.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Prereqs" : {
          "file" : "lib/CPAN/Meta/Prereqs.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Requirements" : {
          "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.120351"
-      },
-      "CPAN::Meta::Requirements::_Range::Exact" : {
-         "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.120351"
-      },
-      "CPAN::Meta::Requirements::_Range::Range" : {
-         "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Spec" : {
          "file" : "lib/CPAN/Meta/Spec.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       },
       "CPAN::Meta::Validator" : {
          "file" : "lib/CPAN/Meta/Validator.pm",
-         "version" : "2.120351"
+         "version" : "2.120530"
       }
    },
    "release_status" : "stable",
@@ -106,6 +98,6 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.120351"
+   "version" : "2.120530"
 }
 
