@@ -24,6 +24,7 @@ lib/CPAN/Meta/Validator.pm
 perlcritic.rc
 t/00-compile.t
 t/accepts.t
+t/bad_version_hook.t
 t/basic.t
 t/converter-bad.t
 t/converter-fail.t
@@ -48,6 +49,7 @@ t/data-bad/META-1_3.yml
 t/data-bad/META-1_4.yml
 t/data-bad/META-2.json
 t/data-bad/restrictive-2.json
+t/data-bad/version-ranges-2.json
 t/data-fail/META-1_0.yml
 t/data-fail/META-1_1.yml
 t/data-fail/META-1_2.yml
@@ -65,6 +67,8 @@ t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
 t/data/unicode.yml
+t/data/version-ranges-1_4.yml
+t/data/version-ranges-2.json
 t/finalize.t
 t/from-hash.t
 t/load-bad.t
@@ -76,6 +80,7 @@ t/prereqs-merge.t
 t/prereqs.t
 t/repository.t
 t/save-load.t
+t/strings.t
 t/validator.t
 xt/author/critic.t
 xt/author/pod-spell.t

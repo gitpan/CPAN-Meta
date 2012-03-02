@@ -34,13 +34,14 @@
             "Scalar::Util" : "0",
             "perl" : "5.006",
             "strict" : "0",
-            "version" : "0.82",
+            "version" : "0.88",
             "warnings" : "0"
          }
       },
       "test" : {
          "requires" : {
             "Data::Dumper" : "0",
+            "File::Basename" : "0",
             "File::Find" : "0",
             "File::Spec" : "0",
             "File::Temp" : "0.20",
@@ -54,35 +55,35 @@
    "provides" : {
       "CPAN::Meta" : {
          "file" : "lib/CPAN/Meta.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Converter" : {
          "file" : "lib/CPAN/Meta/Converter.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Feature" : {
          "file" : "lib/CPAN/Meta/Feature.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::History" : {
          "file" : "lib/CPAN/Meta/History.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Prereqs" : {
          "file" : "lib/CPAN/Meta/Prereqs.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Requirements" : {
          "file" : "lib/CPAN/Meta/Requirements.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Spec" : {
          "file" : "lib/CPAN/Meta/Spec.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       },
       "CPAN::Meta::Validator" : {
          "file" : "lib/CPAN/Meta/Validator.pm",
-         "version" : "2.120530"
+         "version" : "2.120620"
       }
    },
    "release_status" : "stable",
@@ -98,6 +99,6 @@
          "web" : "http://github.com/dagolden/cpan-meta"
       }
    },
-   "version" : "2.120530"
+   "version" : "2.120620"
 }
 

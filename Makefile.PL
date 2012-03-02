@@ -13,6 +13,7 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "David Golden <dagolden\@cpan.org>, Ricardo Signes <rjbs\@cpan.org>",
   "BUILD_REQUIRES" => {
     "Data::Dumper" => 0,
+    "File::Basename" => 0,
     "File::Find" => 0,
     "File::Spec" => 0,
     "File::Temp" => "0.20",
@@ -35,10 +36,10 @@ my %WriteMakefileArgs = (
     "Parse::CPAN::Meta" => "1.4400",
     "Scalar::Util" => 0,
     "strict" => 0,
-    "version" => "0.82",
+    "version" => "0.88",
     "warnings" => 0
   },
-  "VERSION" => "2.120530",
+  "VERSION" => "2.120620",
   "test" => {
     "TESTS" => "t/*.t"
   }
