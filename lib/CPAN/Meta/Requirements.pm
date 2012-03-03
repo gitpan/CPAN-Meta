@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package CPAN::Meta::Requirements;
-our $VERSION = '2.120620'; # VERSION
+our $VERSION = '2.120630'; # VERSION
 # ABSTRACT: a set of version requirements for a CPAN dist
 
 
@@ -46,6 +46,11 @@ sub _version_object {
   # ensure no leading '.'
   if ( $vobj =~ m{\A\.} ) {
     $vobj = version->parse("0$vobj");
+  }
+
+  # ensure normal v-string form
+  if ( $vobj->is_qv ) {
+    $vobj = version->parse($vobj->normal);
   }
 
   return $vobj;
@@ -417,7 +422,7 @@ CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 =head1 VERSION
 
-version 2.120620
+version 2.120630
 
 =head1 SYNOPSIS
 

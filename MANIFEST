@@ -67,6 +67,7 @@ t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
 t/data/unicode.yml
+t/data/version-not-normal.json
 t/data/version-ranges-1_4.yml
 t/data/version-ranges-2.json
 t/finalize.t
