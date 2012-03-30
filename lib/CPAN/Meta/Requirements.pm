@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package CPAN::Meta::Requirements;
-our $VERSION = '2.120630'; # VERSION
+our $VERSION = '2.120900'; # VERSION
 # ABSTRACT: a set of version requirements for a CPAN dist
 
 
@@ -187,7 +187,12 @@ my %methods_for_op = (
 sub add_string_requirement {
   my ($self, $module, $req) = @_;
 
+  Carp::confess("No requirement string provided for $module")
+    unless defined $req && length $req;
+
   my @parts = split qr{\s*,\s*}, $req;
+
+
   for my $part (@parts) {
     my ($op, $ver) = $part =~ m{\A\s*(==|>=|>|<=|<|!=)\s*(.*)\z};
 
@@ -209,7 +214,12 @@ sub from_string_hash {
   my $self = $class->new;
 
   for my $module (keys %$hash) {
-    $self->add_string_requirement($module, $hash->{ $module });
+    my $req = $hash->{$module};
+    unless ( defined $req && length $req ) {
+      $req = 0;
+      Carp::carp("Undefined requirement for $module treated as '0'");
+    }
+    $self->add_string_requirement($module, $req);
   }
 
   return $self;
@@ -422,7 +432,7 @@ CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 =head1 VERSION
 
-version 2.120630
+version 2.120900
 
 =head1 SYNOPSIS
 
