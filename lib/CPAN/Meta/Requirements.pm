@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 package CPAN::Meta::Requirements;
-our $VERSION = '2.120900'; # VERSION
+our $VERSION = '2.120920'; # VERSION
 # ABSTRACT: a set of version requirements for a CPAN dist
 
 
@@ -114,6 +114,14 @@ sub clear_requirement {
   delete $self->{requirements}{ $module };
 
   return $self;
+}
+
+
+sub requirements_for_module {
+  my ($self, $module) = @_;
+  my $entry = $self->__entry_for($module);
+  return unless $entry;
+  return $entry->as_string;
 }
 
 
@@ -422,6 +430,7 @@ sub from_string_hash {
 }
 
 1;
+# vim: ts=2 sts=2 sw=2 et:
 
 __END__
 =pod
@@ -432,7 +441,7 @@ CPAN::Meta::Requirements - a set of version requirements for a CPAN dist
 
 =head1 VERSION
 
-version 2.120900
+version 2.120920
 
 =head1 SYNOPSIS
 
@@ -562,6 +571,16 @@ true.
 This removes the requirement for a given module from the object.
 
 This method returns the requirements object.
+
+=head2 requirements_for_module
+
+  $req->requirements_for_module( $module );
+
+This returns a string containing the version requirements for a given module in
+the format described in L<CPAN::Meta::Spec> or undef if the given module has no
+requirements. This should only be used for informational purposes such as error
+messages and should not be interpreted or used for comparison (see
+L</accepts_module> instead.)
 
 =head2 required_modules
 
