@@ -55,7 +55,6 @@ CPAN
 Meta
 History
 Converter
+Validator
 Feature
 Spec
-Validator
-Requirements

@@ -30,6 +30,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "CPAN::Meta",
   "PREREQ_PM" => {
+    "CPAN::Meta::Requirements" => "2.121",
     "CPAN::Meta::YAML" => "0.008",
     "Carp" => 0,
     "JSON::PP" => "2.27200",
@@ -39,7 +40,7 @@ my %WriteMakefileArgs = (
     "version" => "0.88",
     "warnings" => 0
   },
-  "VERSION" => "2.120920",
+  "VERSION" => "2.120921",
   "test" => {
     "TESTS" => "t/*.t"
   }

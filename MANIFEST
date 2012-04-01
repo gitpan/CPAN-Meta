@@ -18,14 +18,10 @@ lib/CPAN/Meta/Converter.pm
 lib/CPAN/Meta/Feature.pm
 lib/CPAN/Meta/History.pm
 lib/CPAN/Meta/Prereqs.pm
-lib/CPAN/Meta/Requirements.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
 perlcritic.rc
 t/00-compile.t
-t/accepts.t
-t/bad_version_hook.t
-t/basic.t
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
@@ -70,10 +66,7 @@ t/data/unicode.yml
 t/data/version-not-normal.json
 t/data/version-ranges-1_4.yml
 t/data/version-ranges-2.json
-t/finalize.t
-t/from-hash.t
 t/load-bad.t
-t/merge.t
 t/meta-obj.t
 t/no-index.t
 t/prereqs-finalize.t
