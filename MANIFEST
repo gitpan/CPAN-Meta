@@ -1,3 +1,4 @@
+CONTRIBUTING
 Changes
 LICENSE
 MANIFEST
@@ -5,7 +6,6 @@ META.json
 META.yml
 Makefile.PL
 README
-README.PATCHING
 Todo
 dist.ini
 history/META-spec-1_0.html
@@ -22,6 +22,7 @@ lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
 perlcritic.rc
 t/00-compile.t
+t/00-report-prereqs.t
 t/converter-bad.t
 t/converter-fail.t
 t/converter.t
@@ -59,6 +60,7 @@ t/data/META-1_3.yml
 t/data/META-1_4.yml
 t/data/META-2.json
 t/data/gpl-1_4.yml
+t/data/provides-version-missing.json
 t/data/resources.yml
 t/data/restricted-2.json
 t/data/restrictive-1_4.yml
@@ -79,6 +81,7 @@ t/validator.t
 xt/author/critic.t
 xt/author/pod-spell.t
 xt/release/distmeta.t
+xt/release/minimum-version.t
 xt/release/pod-coverage.t
 xt/release/pod-syntax.t
 xt/release/portability.t
