@@ -3,7 +3,7 @@ use 5.006;
 use strict;
 use warnings;
 package CPAN::Meta::History;
-our $VERSION = '2.130870'; # VERSION
+our $VERSION = '2.130880'; # VERSION
 
 1;
 
@@ -21,7 +21,7 @@ CPAN::Meta::History - history of CPAN Meta Spec changes
 
 =head1 VERSION
 
-version 2.130870
+version 2.130880
 
 =head1 DESCRIPTION
 
@@ -175,10 +175,6 @@ November 2006
 
 =item *
 
-Clarified that all prerequisites take version range specifications
-
-=item *
-
 Added 'no_index' subkey 'directory' and removed 'dir' to match actual
 usage in the wild
 
@@ -209,6 +205,10 @@ Changed 'generated_by' to be mandatory
 =item *
 
 Changed 'license' to be mandatory
+
+=item *
+
+Added version range specifications for prerequisites
 
 =item *
 

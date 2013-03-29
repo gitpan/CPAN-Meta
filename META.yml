@@ -19,7 +19,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300031, CPAN::Meta::Converter version 2.130880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -31,25 +31,25 @@ no_index:
 provides:
   CPAN::Meta:
     file: lib/CPAN/Meta.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::Converter:
     file: lib/CPAN/Meta/Converter.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::Feature:
     file: lib/CPAN/Meta/Feature.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::History:
     file: lib/CPAN/Meta/History.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::Prereqs:
     file: lib/CPAN/Meta/Prereqs.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::Spec:
     file: lib/CPAN/Meta/Spec.pm
-    version: 2.130870
+    version: 2.130880
   CPAN::Meta::Validator:
     file: lib/CPAN/Meta/Validator.pm
-    version: 2.130870
+    version: 2.130880
 requires:
   CPAN::Meta::Requirements: 2.121
   CPAN::Meta::YAML: 0.008
@@ -64,7 +64,7 @@ requires:
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=CPAN-Meta
   repository: git://github.com/dagolden/cpan-meta.git
-version: 2.130870
+version: 2.130880
 x_contributors:
   - 'Ansgar Burchardt <ansgar@cpan.org>'
   - 'Christopher J. Madsen <cjm@cpan.org>'
