@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.130880
+    version 2.131490
 
 SYNOPSIS
       my $meta = CPAN::Meta->load_file('META.json');
@@ -267,11 +267,7 @@ AUTHORS
 CONTRIBUTORS
     *   Ansgar Burchardt <ansgar@cpan.org>
 
-    *   Michael G. Schwern <mschwern@cpan.org>
-
-    *   Randy Sims <randys@thepierianspring.org>
-
-    *   Ævar Arnfjörð Bjarmason <avar@cpan.org>
+    *   Avar Arnfjord Bjarmason <avar@cpan.org>
 
     *   Christopher J. Madsen <cjm@cpan.org>
 
@@ -285,11 +281,17 @@ CONTRIBUTORS
 
     *   Ken Williams <kwilliams@cpan.org>
 
-    *   Lars Dɪᴇᴄᴋᴏᴡ 迪拉斯 <daxim@cpan.org>
+    *   Kenichi Ishigaki <ishigaki@cpan.org>
+
+    *   Lars Dieckow <daxim@cpan.org>
 
     *   Leon Timmermans <leont@cpan.org>
 
     *   Mark Fowler <markf@cpan.org>
+
+    *   Michael G. Schwern <mschwern@cpan.org>
+
+    *   Randy Sims <randys@thepierianspring.org>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2010 by David Golden and Ricardo Signes.
