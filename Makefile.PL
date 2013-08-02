@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.008;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -22,29 +22,29 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "CPAN::Meta::Requirements" => "2.121",
     "CPAN::Meta::YAML" => "0.008",
-    "Carp" => 0,
+    "Carp" => "0",
     "JSON::PP" => "2.27200",
     "Parse::CPAN::Meta" => "1.4403",
-    "Scalar::Util" => 0,
-    "strict" => 0,
+    "Scalar::Util" => "0",
+    "strict" => "0",
     "version" => "0.88",
-    "warnings" => 0
+    "warnings" => "0"
   },
   "TEST_REQUIRES" => {
-    "Data::Dumper" => 0,
-    "ExtUtils::MakeMaker" => 0,
-    "File::Basename" => 0,
-    "File::Find" => 0,
-    "File::Spec" => 0,
-    "File::Spec::Functions" => 0,
+    "Data::Dumper" => "0",
+    "ExtUtils::MakeMaker" => "0",
+    "File::Basename" => "0",
+    "File::Find" => "0",
+    "File::Spec" => "0",
+    "File::Spec::Functions" => "0",
     "File::Temp" => "0.20",
-    "IO::Dir" => 0,
-    "List::Util" => 0,
+    "IO::Dir" => "0",
+    "List::Util" => "0",
     "Test::More" => "0.88",
-    "overload" => 0,
-    "utf8" => 0
+    "overload" => "0",
+    "utf8" => "0"
   },
-  "VERSION" => "2.131560",
+  "VERSION" => "2.132140",
   "test" => {
     "TESTS" => "t/*.t"
   }
