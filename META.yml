@@ -7,11 +7,12 @@ build_requires:
   Data::Dumper: 0
   ExtUtils::MakeMaker: 0
   File::Basename: 0
-  File::Find: 0
   File::Spec: 0
   File::Spec::Functions: 0
   File::Temp: 0.20
   IO::Dir: 0
+  IO::Handle: 0
+  IPC::Open3: 0
   List::Util: 0
   Test::More: 0.88
   overload: 0
@@ -19,7 +20,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.131560'
+generated_by: 'Dist::Zilla version 4.300038, CPAN::Meta::Converter version 2.132140'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -37,25 +38,25 @@ no_index:
 provides:
   CPAN::Meta:
     file: lib/CPAN/Meta.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::Converter:
     file: lib/CPAN/Meta/Converter.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::Feature:
     file: lib/CPAN/Meta/Feature.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::History:
     file: lib/CPAN/Meta/History.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::Prereqs:
     file: lib/CPAN/Meta/Prereqs.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::Spec:
     file: lib/CPAN/Meta/Spec.pm
-    version: 2.132140
+    version: 2.132510
   CPAN::Meta::Validator:
     file: lib/CPAN/Meta/Validator.pm
-    version: 2.132140
+    version: 2.132510
 requires:
   CPAN::Meta::Requirements: 2.121
   CPAN::Meta::YAML: 0.008
@@ -68,10 +69,10 @@ requires:
   version: 0.88
   warnings: 0
 resources:
-  bugtracker: https://github.com/Perl-Toolchain-Gang/cpan-meta/issues
-  homepage: https://metacpan.org/release/CPAN-Meta
-  repository: git://github.com/dagolden/cpan-meta.git
-version: 2.132140
+  bugtracker: https://github.com/Perl-Toolchain-Gang/CPAN-Meta/issues
+  homepage: https://github.com/Perl-Toolchain-Gang/CPAN-Meta
+  repository: https://github.com/Perl-Toolchain-Gang/CPAN-Meta.git
+version: 2.132510
 x_authority: cpan:DAGOLDEN
 x_contributors:
   - 'Ansgar Burchardt <ansgar@cpan.org>'
@@ -89,5 +90,5 @@ x_contributors:
   - 'Mark Fowler <markf@cpan.org>'
   - 'Michael G. Schwern <mschwern@cpan.org>'
   - 'Olaf Alders <olaf@wundersolutions.com>'
-  - 'Olivier Mengué <dolmen@cpan.org>'
+  - 'Olivier MenguÃ© <dolmen@cpan.org>'
   - 'Randy Sims <randys@thepierianspring.org>'

@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.132140
+    version 2.132510
 
 SYNOPSIS
         use v5.10;
@@ -262,16 +262,16 @@ SEE ALSO
 SUPPORT
   Bugs / Feature Requests
     Please report any bugs or feature requests through the issue tracker at
-    <https://github.com/Perl-Toolchain-Gang/cpan-meta/issues>. You will be
+    <https://github.com/Perl-Toolchain-Gang/CPAN-Meta/issues>. You will be
     notified automatically of any progress on your issue.
 
   Source Code
     This is open source software. The code repository is available for
     public review and contribution under the terms of the license.
 
-    <https://github.com/dagolden/cpan-meta>
+    <https://github.com/Perl-Toolchain-Gang/CPAN-Meta>
 
-      git clone git://github.com/dagolden/cpan-meta.git
+      git clone https://github.com/Perl-Toolchain-Gang/CPAN-Meta.git
 
 AUTHORS
     *   David Golden <dagolden@cpan.org>

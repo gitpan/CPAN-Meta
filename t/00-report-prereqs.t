@@ -16,11 +16,12 @@ my @modules = qw(
   Data::Dumper
   ExtUtils::MakeMaker
   File::Basename
-  File::Find
   File::Spec
   File::Spec::Functions
   File::Temp
   IO::Dir
+  IO::Handle
+  IPC::Open3
   JSON::PP
   List::Util
   Parse::CPAN::Meta
