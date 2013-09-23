@@ -78,8 +78,8 @@ lib
 CPAN
 Meta
 Prereqs
-Converter
-Spec
 History
 Validator
 Feature
+Converter
+Spec

@@ -1,5 +1,12 @@
 Revision history for CPAN-Meta
 
+2.132660  2013-09-23 06:04:04 America/New_York
+
+  [FIXED]
+
+  - Installation on Perls < 5.12 will uninstall older versions installed
+    due to being bundled with ExtUtils::MakeMaker
+
 2.132620  2013-09-19 11:18:33 America/New_York
 
   [CHANGED]
