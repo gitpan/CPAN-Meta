@@ -4,7 +4,7 @@ use warnings;
 
 use 5.008;
 
-use ExtUtils::MakeMaker 6.30;
+use ExtUtils::MakeMaker 6.17;
 
 
 
@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   "AUTHOR" => "David Golden <dagolden\@cpan.org>, Ricardo Signes <rjbs\@cpan.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
-    "ExtUtils::MakeMaker" => "6.30"
+    "ExtUtils::MakeMaker" => "6.17"
   },
   "DISTNAME" => "CPAN-Meta",
   "EXE_FILES" => [],
@@ -45,7 +45,7 @@ my %WriteMakefileArgs = (
     "overload" => 0,
     "utf8" => 0
   },
-  "VERSION" => "2.132660",
+  "VERSION" => "2.132661",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -81,7 +81,9 @@ unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
   unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
 
+# Added by Dist::Zilla::Plugin::MakeMaker::Highlander
 if ( $] < 5.012
+  && ! $ENV{PERL_NO_HIGHLANDER}
   && ! ( $ENV{PERL_MM_OPT} && $ENV{PERL_MM_OPT} =~ /(?:INSTALL_BASE|PREFIX)/ )
   && ! grep { /INSTALL_BASE/ || /PREFIX/ } @ARGV
 ) {

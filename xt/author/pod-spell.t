@@ -77,9 +77,9 @@ randys
 lib
 CPAN
 Meta
-Prereqs
-History
-Validator
 Feature
+Validator
 Converter
+History
 Spec
+Prereqs

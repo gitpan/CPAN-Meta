@@ -5,7 +5,7 @@
       "Ricardo Signes <rjbs@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132620",
+   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132660",
    "license" : [
       "perl_5"
    ],
@@ -29,7 +29,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.30"
+            "ExtUtils::MakeMaker" : "6.17"
          }
       },
       "develop" : {
@@ -75,31 +75,31 @@
    "provides" : {
       "CPAN::Meta" : {
          "file" : "lib/CPAN/Meta.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::Converter" : {
          "file" : "lib/CPAN/Meta/Converter.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::Feature" : {
          "file" : "lib/CPAN/Meta/Feature.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::History" : {
          "file" : "lib/CPAN/Meta/History.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::Prereqs" : {
          "file" : "lib/CPAN/Meta/Prereqs.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::Spec" : {
          "file" : "lib/CPAN/Meta/Spec.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       },
       "CPAN::Meta::Validator" : {
          "file" : "lib/CPAN/Meta/Validator.pm",
-         "version" : "2.132660"
+         "version" : "2.132661"
       }
    },
    "release_status" : "stable",
@@ -114,7 +114,7 @@
          "web" : "https://github.com/Perl-Toolchain-Gang/CPAN-Meta"
       }
    },
-   "version" : "2.132660",
+   "version" : "2.132661",
    "x_authority" : "cpan:DAGOLDEN",
    "x_contributors" : [
       "Ansgar Burchardt <ansgar@cpan.org>",
