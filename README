@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.132661
+    version 2.132830
 
 SYNOPSIS
         use v5.10;
@@ -182,7 +182,7 @@ METHODS
     argument, the copied metadata will be converted to the version of the
     specification and returned. For example:
 
-      my $string = $meta->as_struct( {version => "1.4"} );
+      my $string = $meta->as_string( {version => "1.4"} );
 
     For "version" greater than or equal to 2, the string will be serialized
     as JSON. For "version" less than 2, the string will be serialized as
@@ -285,6 +285,8 @@ CONTRIBUTORS
 
     *   Christopher J. Madsen <cjm@cpan.org>
 
+    *   Chuck Adams <cja987@gmail.com>
+
     *   Cory G Watson <gphat@cpan.org>
 
     *   Damyan Ivanov <dam@cpan.org>
@@ -309,7 +311,7 @@ CONTRIBUTORS
 
     *   Olaf Alders <olaf@wundersolutions.com>
 
-    *   Olivier Mengué <dolmen@cpan.org>
+    *   Olivier Mengue <dolmen@cpan.org>
 
     *   Randy Sims <randys@thepierianspring.org>
 

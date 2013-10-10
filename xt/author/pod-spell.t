@@ -32,6 +32,9 @@ avar
 Christopher
 Madsen
 cjm
+Chuck
+Adams
+cja987
 Cory
 Watson
 gphat
@@ -69,7 +72,7 @@ Olaf
 Alders
 olaf
 Olivier
-Mengué
+Mengue
 dolmen
 Randy
 Sims
@@ -77,9 +80,9 @@ randys
 lib
 CPAN
 Meta
-Feature
 Validator
-Converter
+Feature
 History
-Spec
+Converter
 Prereqs
+Spec
