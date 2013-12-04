@@ -22,7 +22,6 @@ lib/CPAN/Meta/Prereqs.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
 perlcritic.rc
-t/00-compile.t
 t/00-report-prereqs.t
 t/README-data.txt
 t/converter-bad.t
@@ -85,6 +84,7 @@ t/repository.t
 t/save-load.t
 t/strings.t
 t/validator.t
+xt/author/00-compile.t
 xt/author/critic.t
 xt/author/pod-spell.t
 xt/release/distmeta.t

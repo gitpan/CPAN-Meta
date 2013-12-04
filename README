@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.132830
+    version 2.133380
 
 SYNOPSIS
         use v5.10;

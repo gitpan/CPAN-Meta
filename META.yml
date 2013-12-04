@@ -11,16 +11,13 @@ build_requires:
   File::Spec::Functions: 0
   File::Temp: 0.20
   IO::Dir: 0
-  IO::Handle: 0
-  IPC::Open3: 0
-  List::Util: 0
   Test::More: 0.88
   overload: 0
   utf8: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.17
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132810'
+generated_by: 'Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -38,30 +35,31 @@ no_index:
 provides:
   CPAN::Meta:
     file: lib/CPAN/Meta.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::Converter:
     file: lib/CPAN/Meta/Converter.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::Feature:
     file: lib/CPAN/Meta/Feature.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::History:
     file: lib/CPAN/Meta/History.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::Prereqs:
     file: lib/CPAN/Meta/Prereqs.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::Spec:
     file: lib/CPAN/Meta/Spec.pm
-    version: 2.132830
+    version: 2.133380
   CPAN::Meta::Validator:
     file: lib/CPAN/Meta/Validator.pm
-    version: 2.132830
+    version: 2.133380
 requires:
   CPAN::Meta::Requirements: 2.121
   CPAN::Meta::YAML: 0.008
   Carp: 0
   JSON::PP: 2.27200
+  List::Util: 1.33
   Parse::CPAN::Meta: 1.4403
   Scalar::Util: 0
   perl: 5.008
@@ -72,7 +70,7 @@ resources:
   bugtracker: https://github.com/Perl-Toolchain-Gang/CPAN-Meta/issues
   homepage: https://github.com/Perl-Toolchain-Gang/CPAN-Meta
   repository: https://github.com/Perl-Toolchain-Gang/CPAN-Meta.git
-version: 2.132830
+version: 2.133380
 x_authority: cpan:DAGOLDEN
 x_contributors:
   - 'Ansgar Burchardt <ansgar@cpan.org>'
