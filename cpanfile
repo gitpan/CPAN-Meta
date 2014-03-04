@@ -3,7 +3,7 @@ requires "CPAN::Meta::YAML" => "0.008";
 requires "Carp" => "0";
 requires "JSON::PP" => "2.27200";
 requires "List::Util" => "1.33";
-requires "Parse::CPAN::Meta" => "1.4403";
+requires "Parse::CPAN::Meta" => "1.4414";
 requires "Scalar::Util" => "0";
 requires "perl" => "5.008";
 requires "strict" => "0";
@@ -25,7 +25,7 @@ on 'test' => sub {
 
 on 'test' => sub {
   recommends "CPAN::Meta" => "0";
-  recommends "CPAN::Meta::Requirements" => "0";
+  recommends "CPAN::Meta::Requirements" => "2.120900";
 };
 
 on 'configure' => sub {
@@ -33,11 +33,11 @@ on 'configure' => sub {
 };
 
 on 'develop' => sub {
-  requires "Dist::Zilla" => "5.006";
+  requires "Dist::Zilla" => "5.013";
   requires "Dist::Zilla::Plugin::AutoVersion" => "0";
   requires "Dist::Zilla::Plugin::MakeMaker" => "0";
   requires "Dist::Zilla::Plugin::MakeMaker::Highlander" => "0.003";
-  requires "Dist::Zilla::Plugin::OnlyCorePrereqs" => "0";
+  requires "Dist::Zilla::Plugin::OnlyCorePrereqs" => "0.013";
   requires "Dist::Zilla::Plugin::Prereqs" => "0";
   requires "Dist::Zilla::PluginBundle::DAGOLDEN" => "0.053";
   requires "File::Spec" => "0";
