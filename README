@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.140640
+    version 2.141170
 
 SYNOPSIS
         use v5.10;
@@ -314,6 +314,8 @@ CONTRIBUTORS
 
     *   Mark Fowler <markf@cpan.org>
 
+    *   Matt S Trout <mst@shadowcat.co.uk>
+
     *   Michael G. Schwern <mschwern@cpan.org>
 
     *   Olaf Alders <olaf@wundersolutions.com>
@@ -321,6 +323,8 @@ CONTRIBUTORS
     *   Olivier Mengue <dolmen@cpan.org>
 
     *   Randy Sims <randys@thepierianspring.org>
+
+    *   moznion <moznion@gmail.com>
 
 COPYRIGHT AND LICENSE
     This software is copyright (c) 2010 by David Golden and Ricardo Signes.

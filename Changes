@@ -1,5 +1,24 @@
 Revision history for CPAN-Meta
 
+2.141170  2014-04-27 13:03:37-04:00 America/New_York
+
+  [ADDED]
+
+  - Added ability for CPAN::Meta::Converter to convert metadata fragments
+    (incomplete portions of a metadata structure)
+
+  [CHANGED]
+
+  - Optimized internal use of JSON for datastructure cloning
+
+  [FIXED]
+
+  - Removed dependency on List::Util 1.33
+
+  [DOCUMENTED]
+
+  - Clarified language around 'dynamic_config' in the Spec
+
 2.140640  2014-03-05 09:07:05-05:00 America/New_York
 
   [FIXED]
