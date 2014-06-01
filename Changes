@@ -1,5 +1,11 @@
 Revision history for CPAN-Meta
 
+2.141520  2014-05-31 23:41:13-04:00 America/New_York
+
+  [DOCUMENTED]
+
+  - Clarified use of 'file' for the 'provides' field in the Spec
+
 2.141170  2014-04-27 13:03:37-04:00 America/New_York
 
   [ADDED]

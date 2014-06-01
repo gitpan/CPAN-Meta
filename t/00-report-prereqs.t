@@ -50,7 +50,7 @@ my $static_prereqs = do { my $x = {
                       },
        'develop' => {
                       'requires' => {
-                                      'Dist::Zilla' => '5.015',
+                                      'Dist::Zilla' => '5',
                                       'Dist::Zilla::Plugin::AutoVersion' => '0',
                                       'Dist::Zilla::Plugin::MakeMaker' => '0',
                                       'Dist::Zilla::Plugin::MakeMaker::Highlander' => '0.003',
