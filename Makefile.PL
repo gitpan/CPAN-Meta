@@ -39,11 +39,13 @@ my %WriteMakefileArgs = (
     "File::Temp" => "0.20",
     "IO::Dir" => 0,
     "List::Util" => 0,
+    "Scalar::Util" => 0,
     "Test::More" => "0.88",
     "overload" => 0,
-    "utf8" => 0
+    "utf8" => 0,
+    "version" => "0.88"
   },
-  "VERSION" => "2.141520",
+  "VERSION" => "2.142060",
   "test" => {
     "TESTS" => "t/*.t"
   }

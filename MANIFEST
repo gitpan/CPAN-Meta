@@ -19,10 +19,12 @@ lib/CPAN/Meta.pm
 lib/CPAN/Meta/Converter.pm
 lib/CPAN/Meta/Feature.pm
 lib/CPAN/Meta/History.pm
+lib/CPAN/Meta/Merge.pm
 lib/CPAN/Meta/Prereqs.pm
 lib/CPAN/Meta/Spec.pm
 lib/CPAN/Meta/Validator.pm
 perlcritic.rc
+t/00-report-prereqs.dd
 t/00-report-prereqs.t
 t/README-data.txt
 t/converter-bad.t
@@ -78,6 +80,7 @@ t/data-valid/META-1_0.yml
 t/data-valid/META-1_1.yml
 t/data-valid/scalar-meta-spec.yml
 t/load-bad.t
+t/merge.t
 t/meta-obj.t
 t/no-index.t
 t/prereqs-finalize.t

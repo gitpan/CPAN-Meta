@@ -12,9 +12,11 @@ build_requires:
   File::Temp: '0.20'
   IO::Dir: '0'
   List::Util: '0'
+  Scalar::Util: '0'
   Test::More: '0.88'
   overload: '0'
   utf8: '0'
+  version: '0.88'
 configure_requires:
   ExtUtils::MakeMaker: '6.17'
 dynamic_config: 0
@@ -36,25 +38,28 @@ no_index:
 provides:
   CPAN::Meta:
     file: lib/CPAN/Meta.pm
-    version: '2.141520'
+    version: '2.142060'
   CPAN::Meta::Converter:
     file: lib/CPAN/Meta/Converter.pm
-    version: '2.141520'
+    version: '2.142060'
   CPAN::Meta::Feature:
     file: lib/CPAN/Meta/Feature.pm
-    version: '2.141520'
+    version: '2.142060'
   CPAN::Meta::History:
     file: lib/CPAN/Meta/History.pm
-    version: '2.141520'
+    version: '2.142060'
+  CPAN::Meta::Merge:
+    file: lib/CPAN/Meta/Merge.pm
+    version: '2.142060'
   CPAN::Meta::Prereqs:
     file: lib/CPAN/Meta/Prereqs.pm
-    version: '2.141520'
+    version: '2.142060'
   CPAN::Meta::Spec:
     file: lib/CPAN/Meta/Spec.pm
-    version: '2.141520'
+    version: '2.142060'
   CPAN::Meta::Validator:
     file: lib/CPAN/Meta/Validator.pm
-    version: '2.141520'
+    version: '2.142060'
 requires:
   CPAN::Meta::Requirements: '2.121'
   CPAN::Meta::YAML: '0.008'
@@ -70,7 +75,7 @@ resources:
   bugtracker: https://github.com/Perl-Toolchain-Gang/CPAN-Meta/issues
   homepage: https://github.com/Perl-Toolchain-Gang/CPAN-Meta
   repository: https://github.com/Perl-Toolchain-Gang/CPAN-Meta.git
-version: '2.141520'
+version: '2.142060'
 x_authority: cpan:DAGOLDEN
 x_contributors:
   - 'Ansgar Burchardt <ansgar@cpan.org>'

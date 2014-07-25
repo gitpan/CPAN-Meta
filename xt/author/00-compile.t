@@ -2,9 +2,9 @@ use 5.006;
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.041
+# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.043
 
-use Test::More  tests => 7 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+use Test::More  tests => 8 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 
 
@@ -13,6 +13,7 @@ my @module_files = (
     'CPAN/Meta/Converter.pm',
     'CPAN/Meta/Feature.pm',
     'CPAN/Meta/History.pm',
+    'CPAN/Meta/Merge.pm',
     'CPAN/Meta/Prereqs.pm',
     'CPAN/Meta/Spec.pm',
     'CPAN/Meta/Validator.pm'
