@@ -1,5 +1,12 @@
 Revision history for CPAN-Meta
 
+2.142690  2014-09-26 11:06:34-04:00 America/New_York
+
+  [DOCUMENTED]
+
+  - Clarified that no_index is a list of exclusions, and that indexers
+    should generally exclude 'inc', 'xt' and 't' as well.
+
 2.142060  2014-07-25 13:30:06-04:00 America/New_York
 
   [ADDED]

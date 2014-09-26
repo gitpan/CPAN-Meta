@@ -14,21 +14,15 @@ on 'test' => sub {
   requires "ExtUtils::MakeMaker" => "0";
   requires "File::Basename" => "0";
   requires "File::Spec" => "0";
-  requires "File::Spec::Functions" => "0";
   requires "File::Temp" => "0.20";
   requires "IO::Dir" => "0";
-  requires "List::Util" => "0";
-  requires "Scalar::Util" => "0";
   requires "Test::More" => "0.88";
   requires "overload" => "0";
   requires "utf8" => "0";
-  requires "version" => "0.88";
 };
 
 on 'test' => sub {
-  recommends "CPAN::Meta" => "0";
-  recommends "CPAN::Meta::Prereqs" => "0";
-  recommends "CPAN::Meta::Requirements" => "2.120900";
+  recommends "CPAN::Meta" => "2.120900";
 };
 
 on 'configure' => sub {
@@ -37,12 +31,12 @@ on 'configure' => sub {
 
 on 'develop' => sub {
   requires "Dist::Zilla" => "5";
-  requires "Dist::Zilla::Plugin::AutoVersion" => "0";
   requires "Dist::Zilla::Plugin::MakeMaker" => "0";
   requires "Dist::Zilla::Plugin::MakeMaker::Highlander" => "0.003";
-  requires "Dist::Zilla::Plugin::OnlyCorePrereqs" => "0.013";
+  requires "Dist::Zilla::Plugin::OnlyCorePrereqs" => "0.014";
   requires "Dist::Zilla::Plugin::Prereqs" => "0";
-  requires "Dist::Zilla::PluginBundle::DAGOLDEN" => "0.053";
+  requires "Dist::Zilla::Plugin::SurgicalPodWeaver" => "0.0021";
+  requires "Dist::Zilla::PluginBundle::DAGOLDEN" => "0.070";
   requires "File::Spec" => "0";
   requires "File::Temp" => "0";
   requires "IO::Handle" => "0";
