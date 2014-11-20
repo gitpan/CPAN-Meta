@@ -2,7 +2,7 @@ NAME
     CPAN::Meta - the distribution metadata for a CPAN dist
 
 VERSION
-    version 2.142690
+    version 2.143240
 
 SYNOPSIS
         use v5.10;
@@ -146,7 +146,8 @@ METHODS
 
     This method returns true if the given file should be indexed. It decides
     this by checking the "file" and "directory" keys in the "no_index"
-    property of the distmeta structure.
+    property of the distmeta structure. Note that neither the version format
+    nor "release_status" are considered.
 
     $filename should be given in unix format.
 
@@ -155,7 +156,8 @@ METHODS
 
     This method returns true if the given package should be indexed. It
     decides this by checking the "package" and "namespace" keys in the
-    "no_index" property of the distmeta structure.
+    "no_index" property of the distmeta structure. Note that neither the
+    version format nor "release_status" are considered.
 
   features
       my @feature_objects = $meta->features;

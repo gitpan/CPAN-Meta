@@ -1,12 +1,14 @@
 do { my $x = {
        'configure' => {
                         'requires' => {
-                                        'ExtUtils::MakeMaker' => '6.17'
+                                        'ExtUtils::MakeMaker' => '6.17',
+                                        'perl' => '5.006'
                                       }
                       },
        'develop' => {
                       'requires' => {
                                       'Dist::Zilla' => '5',
+                                      'Dist::Zilla::Plugin::Encoding' => '0',
                                       'Dist::Zilla::Plugin::MakeMaker' => '0',
                                       'Dist::Zilla::Plugin::MakeMaker::Highlander' => '0.003',
                                       'Dist::Zilla::Plugin::OnlyCorePrereqs' => '0.014',
@@ -52,6 +54,7 @@ do { my $x = {
                                    'IO::Dir' => '0',
                                    'Test::More' => '0.88',
                                    'overload' => '0',
+                                   'perl' => '5.008',
                                    'utf8' => '0'
                                  }
                  }
